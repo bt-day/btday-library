@@ -1,0 +1,26 @@
+:root {
+
+    /*  Foundation은 기본 재료,
+     Layout은 공간 골격,
+     Component는 재사용 구조,
+     Page는 일회성 조합이며,
+     Exception은 계산·동작·보정·특수 상황
+     모든 상위 구조는 Foundation을 소비한다. */
+
+
+    /*========= safety space  ======== */
+
+
+
+    /*   box-description-bk  */
+
+
+    /*========= safety font  ======== */
+
+
+    --tx-eyebrow: 1.8rem;
+
+
+
+
+}

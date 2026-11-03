@@ -1,0 +1,373 @@
+/*   a03 로그인 폼  */
+
+
+/* ///  -Login 03 - Main Background- /// */
+.a03-login-wrapper {
+    position: relative;
+    min-height: 100dvh;
+    overflow: hidden;
+    background: linear-gradient(135deg,
+            #edf5ff 0%,
+            #f7f9ff 48%,
+            #fff8f3 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  Background Decoration Layer  */
+.a03-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* 공통 Shape */
+.a03-bg__shape {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    border: 70px solid rgba(112, 157, 224, 0.10);
+}
+
+/*  LEFT TOP 화면 좌측에서 크게 들어오는 세로 곡선  */
+.a03-bg__shape--01 {
+    width: 520px;
+    height: 900px;
+    top: -320px;
+    left: -390px;
+    transform: rotate(-12deg);
+}
+
+/*  RIGHT TOP 우측 상단을 가로지르는 큰 곡선  */
+.a03-bg__shape--02 {
+    width: 850px;
+    height: 520px;
+    top: -350px;
+    right: -420px;
+    transform: rotate(18deg);
+}
+
+/* LEFT BOTTOM 좌측 하단에서 올라오는 곡선  */
+.a03-bg__shape--03 {
+    width: 900px;
+    height: 560px;
+    left: -480px;
+    bottom: -390px;
+    transform: rotate(28deg);
+}
+
+/* RIGHT BOTTOM 우측 하단의 큰 세로 곡선  */
+.a03-bg__shape--04 {
+    width: 620px;
+    height: 950px;
+    right: -430px;
+    bottom: -570px;
+    transform: rotate(24deg);
+}
+
+
+/* ================================= */
+/* ================================= */
+/* ================================= */
+
+
+/* ///   -메인 컨텐츠 구성-  /// */
+.a03-login {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 840px);
+    margin-inline: auto;
+    background-color: var(--mjm-color-white);
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--mjm-space-12);
+}
+
+/*  좌측 컨텐츠 시작   */
+.a03-login-left {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-block: var(--mjm-space-36);
+}
+
+.a03-login-left-inner {
+    width: min(100%, 320px);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--mjm-space-20);
+}
+
+.eyebrow-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--mjm-color-blue);
+    border-radius: 10px;
+    color: var(--mjm-color-white);
+    font-size: var(--mjm-font-size-14);
+    font-weight: var(--mjm-font-weight-medium);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-group-title h1 {
+    font-size: clamp(var(--mjm-font-size-32), 4vw, var(--mjm-font-size-36));
+    font-weight: var(--mjm-font-weight-black);
+    line-height: var(--mjm-line-height-tight);
+}
+
+.login-group-title p {
+    font-size: clamp(var(--mjm-font-size-12), 4vw, var(--mjm-font-size-16));
+    font-weight: var(--mjm-font-weight-regular);
+    line-height: var(--mjm-line-height-tight);
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mjm-space-16);
+}
+
+.a03-login-field {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-left: 14px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--mjm-space-8);
+}
+
+.a03-login-field-group {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-left: 14px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--mjm-space-8);
+}
+
+.a03-login-field02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--mjm-space-8);
+}
+
+.eye-show {
+    cursor: pointer;
+}
+
+.eye-show img {
+    width: 20px;
+    height: 20px;
+    padding-right: 14px;
+    background-color: #fff;
+}
+
+.a03-checkbox-password {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.checkbox-group {
+    font-size: var(--mjm-space-12);
+    font-weight: var(--mjm-font-weight-regular);
+}
+
+.a03-checkbox-password a {
+    font-size: var(--mjm-space-12);
+    font-weight: var(--mjm-font-weight-bold);
+    color: var(--mjm-color-blue);
+}
+
+.a03-login-sign-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--mjm-color-blue);
+    color: var(--mjm-color-white);
+}
+
+.a03-login-unline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--mjm-space-8);
+}
+
+.a03-login-unline .unline {
+    flex: 1 1 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.a03-login-social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--mjm-space-12);
+}
+
+.social-button {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.social-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-button:nth-child(1) img {
+    width: 16px;
+    height: 16px;
+}
+
+.a03-login-sign-up {
+    text-align: center;
+    font-size: var(--mjm-space-12);
+    font-weight: var(--mjm-font-weight-regular);
+    line-height: var(--mjm-line-height-tight);
+}
+
+.sign-up-link {
+    font-size: var(--mjm-space-12);
+    font-weight: var(--mjm-font-weight-bold);
+    color: var(--mjm-color-blue);
+}
+
+
+
+
+
+/*  우측 컨텐츠 시작   */
+.a03-login-right {
+    flex: 1 1 0;
+    min-width: 0;
+
+    background: url(../img/a03.jpg) no-repeat;
+    border-radius: 14px;
+
+    background-size: cover;
+    /* object-fit: cover 역할 */
+    background-position: 60% center;
+    /* object-position 역할 */
+}
+
+.a03-login-right-inner {
+    width: min(100%, 320px);
+    margin-inline: auto;
+    padding-block: var(--mjm-space-56);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 15rem;
+}
+
+
+.a03-login-right-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mjm-space-24);
+
+}
+
+.a03-login-right-title h2 {
+    font-size: clamp(var(--mjm-font-size-32), 4vw, var(--mjm-font-size-36));
+    font-weight: var(--mjm-font-weight-medium);
+    line-height: var(--mjm-line-height-tight);
+    color: #1a1a1a;
+}
+
+.a03-login-right-title p {
+    font-size: var(--mjm-font-size-14);
+    font-weight: var(--mjm-font-weight-regular);
+    line-height: var(--mjm-line-height-normal);
+    color: #1a1a1a;
+}
+
+.a03-login-right-bottom-text {
+    font-size: var(--mjm-font-size-14);
+    font-weight: var(--mjm-font-weight-regular);
+    line-height: var(--mjm-line-height-normal);
+    color: var(--mjm-color-white);
+}
+
+
+
+/*  미디어쿼리 분기 */
+
+@media (max-width:840px) {
+    .a03-login {
+        width: 92%;
+    }
+
+    .a03-login-left-inner {
+        width: 82%;
+    }
+
+    .a03-login-right-inner {
+        width: 82%;
+    }
+}
+
+@media (max-width:640px) {
+    .a03-login {
+        flex-direction: column;
+    }
+
+    .a03-login-right {
+        order: 1;
+    }
+
+    .a03-login-left {
+        order: 2;
+
+        margin-top: -40px;
+        z-index: 10;
+        background-color: #fff;
+        border-radius: 32px 32px 0 0;
+    }
+}
+
+
+
+
+
+/*   구분선 라인  */

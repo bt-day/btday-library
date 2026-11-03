@@ -1,0 +1,85 @@
+:root {
+
+    /*///////////////  폰트 페밀리 정의  //////////////*/
+    --bt-font-family-base: "Pretendard", sans-serif;
+
+
+    /*///////////////   layout : space   //////////////*/
+    /*   wrapper-section main   */
+    --mjm-pc-space-wrap-y: 7rem;
+    --mjm-mo-space-wrap-y: 5rem;
+    --mjm-pc-space-section-y: 5.6rem;
+    --mjm-mo-space-section-y: 3.2rem;
+
+    /*   line : 컴포넌트  */
+    --mjm-pc-space-line: 6.51rem;
+    --mjm-mo-space-line: 3.53rem;
+
+
+    /* ==========  foundation/color ==========*/
+    --mjm-color-blue: blue;
+    --mjm-color-red: red;
+    --mjm-color-white: #fff;
+    --mjm-color-gray: #dddddd;
+    --mjm-color-bg-black: #000;
+    --mjm-color-grid-bgcolor: #303030;
+    --mjm-color-grid-inner-box: #1a1a1a;
+
+
+    /* ==========  foundation/space ==========*/
+    --mjm-space-4: 0.4rem;
+    --mjm-space-8: 0.8rem;
+    --mjm-space-12: 1.2rem;
+    --mjm-space-16: 1.6rem;
+    --mjm-space-18: 1.8rem;
+    --mjm-space-20: 2rem;
+    --mjm-space-24: 2.4rem;
+    --mjm-space-28: 2.8rem;
+    --mjm-space-32: 3.2rem;
+    --mjm-space-36: 3.6rem;
+    --mjm-space-44: 4.4rem;
+    --mjm-space-48: 4.8rem;
+    --mjm-space-56: 5.6rem;
+    --mjm-space-64: 6.4rem;
+    --mjm-space-72: 7.2rem;
+    --mjm-space-80: 8rem;
+    --mjm-space-96: 9.6rem;
+
+    /* ==========  foundation/font ==========*/
+    --mjm-font-size-10: 1rem;
+    --mjm-font-size-12: 1.2rem;
+    /* caption */
+    --mjm-font-size-14: 1.4rem;
+    /* small text */
+    --mjm-font-size-16: 1.6rem;
+    /* body */
+    --mjm-font-size-18: 1.8rem;
+    /* large body */
+    --mjm-font-size-24: 2.4rem;
+    /* small heading */
+    --mjm-font-size-32: 3.2rem;
+    --mjm-font-size-36: 3.6rem;
+    --mjm-font-size-42: 4.2rem;
+    /* section heading */
+    --mjm-font-size-48: 4.8rem;
+    /* large heading */
+    --mjm-font-size-62: 6.4rem;
+    /* hero heading */
+
+
+    /* ==========  foundation/fontweight ==========*/
+    --mjm-font-weight-light: 300;
+    --mjm-font-weight-regular: 400;
+    --mjm-font-weight-medium: 500;
+    --mjm-font-weight-semibold: 600;
+    --mjm-font-weight-bold: 700;
+    --mjm-font-weight-black: 900;
+
+
+    /* ==========  foundation/lineheight ==========*/
+    --mjm-line-height-none: 1;
+    --mjm-line-height-tight: 1.2;
+    --mjm-line-height-normal: 1.5;
+    --mjm-line-height-relaxed: 1.65;
+
+}

@@ -1,0 +1,84 @@
+:root {
+
+    /*  Foundation은 기본 재료,
+     Layout은 공간 골격,
+     Component는 재사용 구조,
+     Page는 일회성 조합이며,
+     Exception은 계산·동작·보정·특수 상황
+     모든 상위 구조는 Foundation을 소비한다. */
+
+
+    /*///////////////   component : space   //////////////*/
+    /*  hero  section  */
+    --bt-pc-space-hero-y: 8rem;
+    --bt-mo-space-hero-y: 4rem;
+    /*  hero title group */
+    --bt-space-hero-title-group-y: 3.6rem;
+    /*  hero title */
+    --bt-pc-space-hero-title: 2.2rem;
+    --bt-mo-space-hero-title: 1.8rem;
+    /*  hero : sub-list  */
+    --bt-pc-space-sub-list-x: 4.2rem;
+    --bt-mo-space-sub-list-y: 3.2rem;
+    --bt-space-sub-list-text-list-y: 1.6rem;
+
+    /*  sub hero  */
+    --bt-pc-space-section-title-y: 1.8rem;
+    --bt-mo-space-section-title-y: 1.4rem;
+
+    /*  section card  ::  pc-mobile 동일  */
+    --bt-space-section-card-x: 1.5rem;
+    --bt-space-section-card-y: 1.5rem;
+    --bt-space-card-padding: 2rem;
+    --bt-space-card-content-y: 2rem;
+    --bt-space-card-bx-text-y: 1.2rem;
+
+    /*  end-text  ::  pc-mobile 동일  */
+    --bt-space-end-text: 3rem;
+    --bt-space-end-content: 1rem;
+
+
+
+
+    /*////////////////   component : font   //////////////*/
+    /*   hero  -  section   */
+    --bt-pc-font-hero-eyebrow: 2.2rem;
+    --bt-mo-font-hero-eyebrow: 1.4rem;
+    --bt-pc-font-hero-text: 6.4rem;
+    --bt-mo-font-hero-text: 3.6rem;
+    --bt-pc-font-hero-description: 2.2rem;
+    --bt-mo-font-hero-description: 1.8rem;
+    --bt-font-text-list-text: 2.2rem;
+    --bt-font-text-list-cont: 1.6rem;
+
+    /*  sub-hero  */
+    --bt-pc-font-sub-eyebrow: 1.8rem;
+    --bt-mo-font-sub-eyebrow: 1.4rem;
+    --bt-pc-font-sub-hero-text: 4.6rem;
+    --bt-mo-font-sub-hero-text: 3.2rem;
+    --bt-font-sub-hero-color: var(--bt-color-white-500);
+    --bt-font-hero-eyebrow-color: var(--bt-color-white-500);
+
+    /*  section card  */
+    --bt-font-card-eyebrow: 1.4rem;
+    --bt-font-card-bx-eyebrow: 2rem;
+    --bt-font-card-bx-text: 1.4rem;
+    --bt-card-eyebrow-color-default: var(--bt-color-blue-500);
+    --bt-card-eyebrow-color-secondary: var(--bt-color-red-500);
+
+    /*   end text  */
+    --bt-font-end-content-eyebrow: 1.4rem;
+    --bt-font-end-content-description: 1.4rem;
+
+
+
+
+
+    /* ==========  foundation/color ==========*/
+    /* Foundation Token: 원재료 */
+    --bt-color-blue-500: #2b6ef3;
+    --bt-color-red-500: #ff5a5a;
+
+    --bt-color-white-500: #fff;
+    --bt-color-bg-black-500: #000;
+}

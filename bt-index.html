@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+        <title>BT-day library</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_component_token.css" rel="stylesheet">
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Page - Token -->
+        <link href="bt_css/bt_tokens/bt_library_token.css" rel="stylesheet">
+
+        <!-- Page css -->
+        <link href="bt_css/bt_pages/bt_library.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <header>
+                <a class="bt-logo" href="#">BTDAY</a>
+                <nav aria-label="주요 메뉴">
+                    <ul>
+                        <li>
+                            <a href="">Components</a>
+                            <ul class="sub-2depth">
+                                <li>Navigation</li>
+                                <li>Button</li>
+                                <li>Form &amp; Input</li>
+                                <li>Modal &amp; Popup</li>
+                                <li>Table &amp; Board</li>
+                                <li>Card</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Patterns</a>
+                            <ul class="sub-2depth">
+                                <li>Header &amp; Footer</li>
+                                <li>Search &amp; Filter</li>
+                                <li>Gallery &amp; Slider</li>
+                                <li>Pagination</li>
+                                <li>Responsive UI</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Foundation</a>
+                            <ul class="sub-2depth">
+                                <li>Color</li>
+                                <li>Typography</li>
+                                <li>Spacing</li>
+                                <li>Layout & Grid</li>
+                                <li>Design Tokens</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Guides</a>
+                            <ul class="sub-2depth">
+                                <li>Getting Started</li>
+                                <li>HTML Structure</li>
+                                <li>CSS Architecture</li>
+                                <li>JavaScript</li>
+                                <li>Accessibility</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Projects</a>
+                            <ul class="sub-2depth">
+                                <li>Diva Page</li>
+                                <li>MJM Modern Web</li>
+                                <li>BTDAY Showcase</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">About</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button type="button" class="ham-btn" aria-label="메뉴 열기" aria-expanded="false"
+                    aria-controls="mobile-nav">
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                </button>
+            </header>
+            <main>
+                <div class="gallery-hero">
+                    <div class="main-search">
+                        <form role="search">
+                            <label for="search" class="blind">라이브러리 검색</label>
+                            <input id="search" type="search" name="search" placeholder="Search BTDAY Library">
+                            <button type="submit" aria-label="검색"><img src="bt_assets/icon-svg/search.svg"
+                                    alt="" /></button>
+                        </form>
+                    </div>
+                    <div class="bt-hero">
+                        <h3>COMPONENT</h3>
+                        <h1>Build Better Components, Create Better Experiences.</h1>
+                        <p>
+                            Reusable components designed with clear responsibility,
+                            consistent structure, and practical patterns for real-world
+                            web interfaces and modern digital experiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="bt-slider-progress">
+                    <button class="bt-slider-progress__item" type="button" aria-label="1번 슬라이드 보기">
+                        <span class="bt-slider-progress__bar"></span>
+                    </button>
+                    <button class="bt-slider-progress__item" type="button" aria-label="2번 슬라이드 보기">
+                        <span class="bt-slider-progress__bar"></span>
+                    </button>
+                    <button class="bt-slider-progress__item" type="button" aria-label="3번 슬라이드 보기">
+                        <span class="bt-slider-progress__bar"></span>
+                    </button>
+                    <button class="bt-slider-progress__item" type="button" aria-label="4번 슬라이드 보기">
+                        <span class="bt-slider-progress__bar"></span>
+                    </button>
+                </div>
+            </main>
+            <footer>
+                <div class="inner-footer-group">
+                    <div class="ft-logo">
+                        <h3>BTDAY</h3>
+                        <p>Component Library</p>
+                    </div>
+                    <div class="right-text">
+                        <h3>Reusable UI resources for modern web interfaces</h3>
+                        <p>Components Patterns Foundation Guides</p>
+                    </div>
+                </div>
+                <p class="ft-copyright">© 2026 BTDAY. All rights reserved</p>
+            </footer>
+        </div>
+
+    </body>
+
+</html>
