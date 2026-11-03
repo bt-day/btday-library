@@ -34,7 +34,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 9999;
+    z-index: 99;
 }
 
 .bt-logo {
@@ -100,9 +100,6 @@ header nav>ul>li:has(> .sub-2depth):focus-within::after {
 }
 
 
-
-
-
 .sub-2depth {
     position: absolute;
     top: 30px;
@@ -163,10 +160,158 @@ header nav ul>li:focus-within>.sub-2depth {
 }
 
 
-
 .ham-btn {
     display: none;
 }
+
+.bt-mobile-navi {
+    display: none;
+}
+
+
+
+/* 모바일 네비 세팅 */
+@media (max-width:1186px) {
+    .bt-pc-navi {
+        display: none;
+    }
+
+    .bt-mobile-navi {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 70%;
+        height: 100dvh;
+        z-index: 99999;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+
+        display: block;
+        background-color: #fff;
+
+        flex: 1 1 70%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--bt-space-24);
+
+    }
+
+    .bt-mobile-navi h3 {
+        width: min(calc(100% - 60px), 1000px);
+        margin-inline: auto;
+        margin-top: 40px;
+
+        font-size: var(--bt-font-size-24);
+        font-weight: var(--bt-font-weight-black);
+    }
+
+    .bt-mobile-navi>ul {
+        width: min(100%, 1000px);
+        margin-bottom: 60px;
+    }
+
+    .bt-mobile-navi>ul>li {
+        width: min(calc(100% - 60px), 1000px);
+        margin-inline: auto;
+        margin-top: 40px;
+    }
+
+    .bt-mobile-navi>ul>li>button {
+        font-size: var(--bt-font-size-18);
+        font-weight: var(--bt-font-weight-bold);
+        line-height: var(--bt-line-height-tight);
+    }
+
+
+    /* 1뎁스 화살표 방향전환 지정 */
+    /* 기본 화살표 */
+    .bt-mobile-navi>ul>li:has(> .bt-accordion-panel)>button::after {
+        content: "";
+        position: absolute;
+        right: 16px;
+        top: 50%;
+
+        width: 5px;
+        height: 5px;
+
+        border-right: 1.5px solid #222;
+        border-bottom: 1.5px solid #222;
+
+        transform: translateY(-70%) rotate(45deg);
+        transition: transform 0.25s ease;
+        pointer-events: none;
+    }
+
+    /* JS가 버튼의 aria-expanded를 false에서 true로 변경하면 화살표가 회전하는 방식 */
+    .bt-mobile-navi>ul>li>button[aria-expanded="true"]::after {
+        transform: translateY(-30%) rotate(225deg);
+    }
+
+
+    .bt-mobile-navi>ul>li>button {
+        position: relative;
+        width: 100%;
+        text-align: left;
+    }
+
+    .sub-2depth-mo {
+        margin-top: 20px;
+        font-size: var(--bt-font-size-16);
+        font-weight: var(--bt-font-weight-regular);
+        line-height: var(--bt-line-height-tight);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--bt-space-16);
+    }
+
+    .bt-mobile-navi .sub-2depth-mo[hidden] {
+        display: none;
+    }
+
+
+    /* 아코디언 이징효과 적용 */
+    .bt-accordion-panel {
+        display: grid;
+        grid-template-rows: 0fr;
+        opacity: 0;
+
+        transition:
+            grid-template-rows 0.35s ease,
+            opacity 0.25s ease;
+    }
+
+    .bt-accordion-panel>.sub-2depth-mo {
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .bt-mobile-navi button[aria-expanded="true"]+.bt-accordion-panel {
+        grid-template-rows: 1fr;
+        opacity: 1;
+    }
+
+
+
+
+
+
+
+
+
+    .ham-btn {
+        display: none;
+    }
+
+}
+
+
+
+
 
 main {
     width: min(calc(100% - 40px), 1440px);
@@ -377,10 +522,16 @@ footer {
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .bt-accordion-panel {
+        transition: none;
+    }
+}
 
 
 /*  미디어쿼리 분기  */
 @media (max-width:1186px) {
+    /*
     header nav {
         display: none;
     }
@@ -396,6 +547,7 @@ footer {
         height: 3px;
         background-color: #1a1a1a;
     }
+        */
 }
 
 

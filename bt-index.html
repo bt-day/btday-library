@@ -24,6 +24,8 @@
 
         <!-- Page css -->
         <link href="bt_css/bt_pages/bt_library.css" rel="stylesheet">
+        <!-- 모바일 navi -->
+        <script src="bt_js/bt-mobile-nav.js" defer></script>
 
     </head>
 
@@ -32,7 +34,7 @@
         <div class="bt-wrapper">
             <header>
                 <a class="bt-logo" href="#">BTDAY</a>
-                <nav aria-label="주요 메뉴">
+                <nav aria-label="주요 메뉴" class="bt-pc-navi">
                     <ul>
                         <li>
                             <a href="">Components</a>
@@ -95,6 +97,73 @@
                     <span class="ham-bar"></span>
                 </button>
             </header>
+            <nav class="bt-mobile-navi">
+                <h3>BTDAY</h3>
+                <ul>
+                    <li>
+                        <button type="button" aria-expanded="false" aria-controls="bt-mo-components">Components</button>
+                        <div class="bt-accordion-panel" id="bt-mo-components">
+                            <ul class="sub-2depth-mo">
+                                <li>Navigation</li>
+                                <li>Button</li>
+                                <li>Form &amp; Input</li>
+                                <li>Modal &amp; Popup</li>
+                                <li>Table &amp; Board</li>
+                                <li>Card</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" aria-expanded="false" aria-controls="bt-mo-patterns">Patterns</button>
+                        <div class="bt-accordion-panel" id="bt-mo-patterns">
+                            <ul class="sub-2depth-mo">
+                                <li>Header &amp; Footer</li>
+                                <li>Search &amp; Filter</li>
+                                <li>Gallery &amp; Slider</li>
+                                <li>Pagination</li>
+                                <li>Responsive UI</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" aria-expanded="false" aria-controls="bt-mo-foundation">Foundation</button>
+                        <div class="bt-accordion-panel" id="bt-mo-foundation">
+                            <ul class="sub-2depth-mo">
+                                <li>Color</li>
+                                <li>Typography</li>
+                                <li>Spacing</li>
+                                <li>Layout & Grid</li>
+                                <li>Design Tokens</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" aria-expanded="false" aria-controls="bt-mo-guides">Guides</button>
+                        <div class="bt-accordion-panel" id="bt-mo-guides">
+                            <ul class="sub-2depth-mo">
+                                <li>Getting Started</li>
+                                <li>HTML Structure</li>
+                                <li>CSS Architecture</li>
+                                <li>JavaScript</li>
+                                <li>Accessibility</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" aria-expanded="false" aria-controls="bt-mo-projects">Projects</button>
+                        <div class="bt-accordion-panel" id="bt-mo-projects">
+                            <ul class="sub-2depth-mo">
+                                <li>Diva Page</li>
+                                <li>MJM Modern Web</li>
+                                <li>BTDAY Showcase</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button">About</button>
+                    </li>
+                </ul>
+            </nav>
             <main>
                 <div class="gallery-hero">
                     <div class="main-search">
