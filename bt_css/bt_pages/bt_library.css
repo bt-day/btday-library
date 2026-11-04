@@ -3,18 +3,61 @@
 
 
 .bt-wrapper {
+    position: relative;
+
     width: min(100%, 1920px);
     min-height: 100dvh;
     margin-inline: auto;
-
-    background: url(../../bt_assets/images/bt-hero-gallery01-2560x1200.jpg) center / cover no-repeat;
-    background-position: center;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: var(--bt-pc-space-wrap-y);
 }
+
+
+/* Main Visual Gallery Background */
+.bt-gallery-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bt-gallery-bg__slide {
+    position: absolute;
+    inset: 0;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 800ms ease;
+}
+
+.bt-gallery-bg__slide.is-active {
+    opacity: 1;
+}
+
+/* 초기 배경 이미지 */
+.bt-gallery-bg__slide:first-child {
+    background-image: url("../../bt_assets/images/bt-hero-gallery01-2560x1200.jpg");
+}
+
+/* 기존 콘텐츠를 배경보다 위에 배치 */
+.bt-wrapper>main,
+.bt-wrapper>footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header는 Main보다 위에 배치 */
+.bt-wrapper>header {
+    z-index: 10;
+}
+
 
 header {
     width: min(calc(100% - 40px), 1440px);
@@ -423,6 +466,9 @@ form {
 .bt-hero {
     flex: 1 1 40%;
 
+    min-height: 240px;
+    /* 추가: 텍스트 그룹 높이 확보 */
+
     display: flex;
     flex-direction: column;
     gap: var(--bt-font-size-20);
@@ -447,6 +493,10 @@ form {
     line-height: var(--bt-line-height-normal);
 }
 
+
+
+/* 슬라이더 프로그레스 지정 */
+
 .bt-slider-progress {
     width: min(82%, 364px);
     margin-inline: auto;
@@ -462,18 +512,27 @@ form {
 .bt-slider-progress__item {
     flex: 1 1 0;
 
+    overflow: hidden;
+    /* 기존 규칙에 추가 */
     height: 12px;
     border-radius: 14px;
     background-color: rgba(255, 255, 255, .4);
 }
 
-.bt-slider-progress__item:nth-child(1) .bt-slider-progress__bar {
+
+.bt-slider-progress__bar {
     display: block;
-    width: 30px;
-    height: 12px;
-    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
     background-color: rgba(255, 255, 255, .9);
+
+    transform: scaleX(0);
+    transform-origin: left center;
 }
+
+
+
 
 
 
@@ -607,6 +666,10 @@ footer {
 
     .main-search {
         width: 100%;
+    }
+
+    .bt-hero {
+        min-height: 220px;
     }
 }
 

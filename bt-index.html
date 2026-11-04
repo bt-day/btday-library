@@ -24,14 +24,22 @@
 
         <!-- Page css -->
         <link href="bt_css/bt_pages/bt_library.css" rel="stylesheet">
+
         <!-- 모바일 navi -->
         <script src="bt_js/bt-mobile-nav.js" defer></script>
+        <!-- Main Visual Gallery -->
+        <script src="bt_js/bt-gallery.js" defer></script>
 
     </head>
 
     <body>
 
         <div class="bt-wrapper">
+            <!-- Main Visual Background -->
+            <div class="bt-gallery-bg" aria-hidden="true">
+                <div class="bt-gallery-bg__slide is-active"></div>
+                <div class="bt-gallery-bg__slide"></div>
+            </div>
             <header>
                 <a class="bt-logo" href="#">BTDAY</a>
                 <nav aria-label="주요 메뉴" class="bt-pc-navi">
