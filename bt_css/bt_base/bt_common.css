@@ -25,6 +25,14 @@ body {
 }
 
 
+/* 마우스 클릭 시 불필요한 외곽선 제거 */
+:where(button, input, select, textarea):focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+
+
 /* ----------------------------------------
    Accessibility
 ---------------------------------------- */
