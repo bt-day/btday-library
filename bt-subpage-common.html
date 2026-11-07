@@ -23,8 +23,6 @@
         <!-- 페이지 전용 CSS : 서브 공통페이지 -->
         <link rel="stylesheet" href="bt_css/bt_pages/bt-subpage-common.css">
 
-
-
     </head>
 
     <body>
@@ -39,34 +37,20 @@
 
             <main class="sub-main-common">
                 <div class="sub-main-common-title">
-                    <h3>Component</h3>
-                    <p>navigation</p>
+                    <h3>Explore Library</h3>
+                    <p>Browse all resources</p>
                 </div>
+
                 <ul class="sub-keyword">
-                    <li>
-                        <button type="button" class="is-active">
-                            All
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button">Navigation</button>
-                    </li>
-                    <li>
-                        <button type="button">Button</button>
-                    </li>
-                    <li>
-                        <button type="button">Form &amp; Input</button>
-                    </li>
-                    <li>
-                        <button type="button">Modal &amp; Popup</button>
-                    </li>
-                    <li>
-                        <button type="button">Total &amp; Board</button>
-                    </li>
-                    <li>
-                        <button type="button">Card</button>
-                    </li>
+                    <li><button type="button" class="is-active" data-category="all">All</button></li>
+                    <li><button type="button" data-category="components">Components</button></li>
+                    <li><button type="button" data-category="patterns">Patterns</button></li>
+                    <li><button type="button" data-category="foundation">Foundation</button></li>
+                    <li><button type="button" data-category="guides">Guides</button></li>
+                    <li><button type="button" data-category="projects">Projects</button></li>
+                    <li><button type="button" data-category="portfolio">Portfolio</button></li>
                 </ul>
+
                 <form role="search" class="sub-search">
                     <label for="search" class="blind">라이브러리 검색</label>
                     <input id="search" type="search" name="search" placeholder="Search BTDAY Library">
@@ -91,56 +75,10 @@
                     </div>
                 </div>
                 <div class="subpage_underline"></div>
+
                 <ul class="subpage-subpd-box">
-                    <li>
-                        <div class="subpd-box">
-                            <div class="subpd-box-innerbx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                        </div>
-                        <h3>1depth</h3>
-                    </li>
-                    <li>
-                        <div class="subpd-box">
-                            <div class="subpd-box-innerbx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                        </div>
-                        <h3>1depth</h3>
-                    </li>
-                    <li>
-                        <div class="subpd-box">
-                            <div class="subpd-box-innerbx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                        </div>
-                        <h3>1depth</h3>
-                    </li>
-                    <li>
-                        <div class="subpd-box">
-                            <div class="subpd-box-innerbx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                        </div>
-                        <h3>1depth</h3>
-                    </li>
-                    <li>
-                        <div class="subpd-box">
-                            <div class="subpd-box-innerbx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                        </div>
-                        <h3>1depth</h3>
-                    </li>
-                    <li>
-                        <div class="subpd-box">
-                            <div class="subpd-box-innerbx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                            <div class="subpd-boxinnertx"></div>
-                        </div>
-                        <h3>1depth</h3>
-                    </li>
                 </ul>
+
                 <div class="subpage-pagenation">
                     <button type="button" class="subpage-prev">
                         <img src="bt_assets/icon-svg/arrow00.svg" alt="" />
@@ -164,6 +102,8 @@
         <script src="bt_js/bt-header.js"></script>
         <script src="bt_js/bt-mobile-nav.js"></script>
         <script src="bt_js/bt-include.js"></script>
+        <!-- 서브페이지 라이브러리 데이터 -->
+        <script src="bt_js/bt-library.js"></script>
 
     </body>
 

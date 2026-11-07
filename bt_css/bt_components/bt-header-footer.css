@@ -260,7 +260,12 @@ header nav ul>li:focus-within>.sub-2depth {
         padding-bottom: 22px;
     }
 
+    /*
     .bt-mobile-navi>ul>li:not(:last-child) {
+        border-bottom: 1px solid #dddddd;
+    }*/
+
+    .bt-mobile-navi>ul>li {
         border-bottom: 1px solid #dddddd;
     }
 

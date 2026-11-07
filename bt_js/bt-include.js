@@ -1,6 +1,5 @@
 /* */
 
-
 /* BTDAY AJAX Include v1.0 */
 
 // ① 공통 HTML을 불러와 삽입하는 함수

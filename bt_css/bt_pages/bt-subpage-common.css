@@ -1,4 +1,4 @@
-/*   뷰티데이 라이브러리  인덱스 css   */
+/*   뷰티데이 라이브러리  서브 공통 css   */
 
 
 .bt-wrapper {
@@ -50,7 +50,21 @@
     height: 800px;
     background-image: url("/bt_assets/images/footer-bg.jpg");
     background-position: center bottom;
+
+    /* 추가: 상단 경계 부드럽게 처리 */
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            #000 35%,
+            #000 100%);
+
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            #000 35%,
+            #000 100%);
 }
+
+
+
 
 
 /* 기존 콘텐츠를 배경보다 위에 배치 */
@@ -295,7 +309,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: var(--bt-space-16);
 }
@@ -359,7 +373,7 @@
 
 
 .subpage-subpd-box>li>h3 {
-    margin-top: 14px;
+    margin-top: 12px;
     margin-left: 34px;
     text-align: start;
     font-size: var(--bt-font-size-16);
@@ -470,7 +484,6 @@
         min-width: 0;
     }
 }
-
 
 
 

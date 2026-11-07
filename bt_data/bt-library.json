@@ -1,0 +1,202 @@
+{
+    "categories": [
+        {
+            "id": "components",
+            "label": "Components",
+            "children": [
+                {
+                    "id": "navigation",
+                    "label": "Navigation"
+                },
+                {
+                    "id": "button",
+                    "label": "Button"
+                },
+                {
+                    "id": "form-input",
+                    "label": "Form & Input"
+                },
+                {
+                    "id": "modal-popup",
+                    "label": "Modal & Popup"
+                },
+                {
+                    "id": "table-board",
+                    "label": "Table & Board"
+                },
+                {
+                    "id": "card",
+                    "label": "Card"
+                }
+            ]
+        },
+        {
+            "id": "patterns",
+            "label": "Patterns",
+            "children": [
+                {
+                    "id": "header-footer",
+                    "label": "Header & Footer"
+                },
+                {
+                    "id": "search-filter",
+                    "label": "Search & Filter"
+                },
+                {
+                    "id": "gallery-slider",
+                    "label": "Gallery & Slider"
+                },
+                {
+                    "id": "pagination",
+                    "label": "Pagination"
+                },
+                {
+                    "id": "responsive-ui",
+                    "label": "Responsive UI"
+                }
+            ]
+        },
+        {
+            "id": "foundation",
+            "label": "Foundation",
+            "children": [
+                {
+                    "id": "color",
+                    "label": "Color"
+                },
+                {
+                    "id": "typography",
+                    "label": "Typography"
+                },
+                {
+                    "id": "spacing",
+                    "label": "Spacing"
+                },
+                {
+                    "id": "layout-grid",
+                    "label": "Layout & Grid"
+                },
+                {
+                    "id": "design-tokens",
+                    "label": "Design Tokens"
+                }
+            ]
+        },
+        {
+            "id": "guides",
+            "label": "Guides",
+            "children": [
+                {
+                    "id": "getting-started",
+                    "label": "Getting Started"
+                },
+                {
+                    "id": "html-structure",
+                    "label": "HTML Structure"
+                },
+                {
+                    "id": "css-architecture",
+                    "label": "CSS Architecture"
+                },
+                {
+                    "id": "javascript",
+                    "label": "JavaScript"
+                },
+                {
+                    "id": "accessibility",
+                    "label": "Accessibility"
+                }
+            ]
+        },
+        {
+            "id": "projects",
+            "label": "Projects",
+            "children": [
+                {
+                    "id": "diva-page",
+                    "label": "Diva Page"
+                },
+                {
+                    "id": "mjm-modern-web",
+                    "label": "MJM Modern Web"
+                },
+                {
+                    "id": "btday-showcase",
+                    "label": "BTDAY Showcase"
+                }
+            ]
+        },
+        {
+            "id": "portfolio",
+            "label": "Portfolio",
+            "children": [
+                {
+                    "id": "banner",
+                    "label": "Banner"
+                },
+                {
+                    "id": "detail",
+                    "label": "Detail"
+                },
+                {
+                    "id": "website",
+                    "label": "Website"
+                },
+                {
+                    "id": "photo",
+                    "label": "Photo"
+                }
+            ]
+        }
+    ],
+    "items": [
+        {
+            "id": "component-navigation",
+            "category": "components",
+            "subcategory": "navigation",
+            "title": "Navigation",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "component-button",
+            "category": "components",
+            "subcategory": "button",
+            "title": "Button",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "component-form-input",
+            "category": "components",
+            "subcategory": "form-input",
+            "title": "Form & Input",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "component-modal-popup",
+            "category": "components",
+            "subcategory": "modal-popup",
+            "title": "Modal & Popup",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "component-table-board",
+            "category": "components",
+            "subcategory": "table-board",
+            "title": "Table & Board",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "component-card",
+            "category": "components",
+            "subcategory": "card",
+            "title": "Card",
+            "description": "",
+            "url": ""
+        }
+    ]
+}
