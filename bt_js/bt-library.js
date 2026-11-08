@@ -2,29 +2,55 @@
 
 
 
-function renderLibrary(items) {
+
+function renderLibrary(items, emptyType = "category") {
     const list = document.querySelector(".subpage-subpd-box");
 
     if (!list) return;
 
-    list.innerHTML = items.map((item) => `
-    <li>
-      <div class="subpd-box">
-        <div class="subpd-box-innerbx"></div>
-        <div class="subpd-boxinnertx"></div>
-        <div class="subpd-boxinnertx"></div>
-      </div>
-      <h3>${item.title}</h3>
-    </li>
-  `).join("");
+    // ① 결과가 없는 경우
+    if (items.length === 0) {
+        const isSearch = emptyType === "search";
 
-    // 결과 수 갱신
+        list.innerHTML = `
+            <li class="bt-empty-state">
+                <div class="bt-empty-state__icon" aria-hidden="true">
+                    ${isSearch ? "⌕" : "◇"}
+                </div>
+                <h3>
+                    ${isSearch ? "No results found" : "Coming Soon"}
+                </h3>
+                <p>
+                    ${isSearch
+                ? "Try a different keyword or explore another category."
+                : "New resources will be added to this category soon."}
+                </p>
+            </li>
+        `;
+    } else {
+        // ② 기존 카드 출력
+        list.innerHTML = items.map((item) => `
+            <li>
+                <div class="subpd-box">
+                    <div class="subpd-box-innerbx"></div>
+                    <div class="subpd-boxinnertx"></div>
+                    <div class="subpd-boxinnertx"></div>
+                </div>
+                <h3>${item.title}</h3>
+            </li>
+        `).join("");
+    }
+
+    // ③ 실제 결과 수 갱신
     const count = document.querySelector("#subpage-count");
 
     if (count) {
         count.textContent = items.length;
     }
 }
+
+
+
 
 
 // 타이틀 출력함수 추가
@@ -42,6 +68,8 @@ function renderPageTitle(title, subtitle) {
     titleElement.textContent = title;
     subtitleElement.textContent = subtitle;
 }
+
+
 
 
 async function loadLibrary() {
@@ -70,44 +98,67 @@ async function loadLibrary() {
         renderLibrary(data.items);
 
         const buttons = document.querySelectorAll(".sub-keyword button");
+        const searchForm = document.querySelector(".sub-search");
+        const searchInput = document.querySelector("#search");
+        const clearButton = document.querySelector(".bt-search-clear");
 
-        buttons.forEach((button) => {
-            button.addEventListener("click", () => {
 
-                const category = button.dataset.category;
 
-                const filteredItems = category === "all"
-                    ? data.items
-                    : data.items.filter((item) => item.category === category);
+        // ① 카테고리 화면 처리: URL은 변경하지 않음
+        function showCategory(category) {
+            searchInput.value = "";
+            updateClearButton();
 
-                renderLibrary(filteredItems);
+            const filteredItems = category === "all"
+                ? data.items
+                : data.items.filter((item) => item.category === category);
 
-                buttons.forEach((btn) => {
-                    btn.classList.remove("is-active");
-                });
+            renderLibrary(filteredItems);
 
-                button.classList.add("is-active");
+            buttons.forEach((button) => {
+                button.classList.toggle(
+                    "is-active",
+                    button.dataset.category === category
+                );
+            });
 
-                if (category === "all") {
-                    renderPageTitle("Explore Library", "Browse all resources");
-                } else {
-                    const selectedCategory = data.categories.find(
-                        (item) => item.id === category
-                    );
+            if (category === "all") {
+                renderPageTitle("Explore Library", "Browse all resources");
+            } else {
+                const selectedCategory = data.categories.find(
+                    (item) => item.id === category
+                );
 
+                if (selectedCategory) {
                     renderPageTitle(
                         selectedCategory.label,
                         categorySubtitles[category]
                     );
                 }
+            }
+        }
 
+        // ② 실제 카테고리 클릭: URL 변경 + 화면 처리
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const category = button.dataset.category;
+                const url = new URL(window.location.href);
+
+                if (category === "all") {
+                    url.searchParams.delete("category");
+                } else {
+                    url.searchParams.set("category", category);
+                }
+
+                url.searchParams.delete("search");
+
+                history.pushState({}, "", url);
+
+                showCategory(category);
             });
         });
 
 
-        // 검색 폼과 입력창 가져오기
-        const searchForm = document.querySelector(".sub-search");
-        const searchInput = document.querySelector("#search");
 
 
         function searchLibrary() {
@@ -117,7 +168,7 @@ async function loadLibrary() {
                 return item.title.toLowerCase().includes(keyword);
             });
 
-            renderLibrary(searchedItems);
+            renderLibrary(searchedItems, "search");
 
             if (keyword) {
                 renderPageTitle(
@@ -139,16 +190,101 @@ async function loadLibrary() {
 
         searchForm.addEventListener("submit", (event) => {
             event.preventDefault();
+
+            const keyword = searchInput.value.trim();
+            const url = new URL(window.location.href);
+
+            url.searchParams.delete("category");
+
+            if (keyword) {
+                url.searchParams.set("search", keyword);
+            } else {
+                url.searchParams.delete("search");
+            }
+
+            history.pushState({}, "", url);
+
             searchLibrary();
         });
 
-        const params = new URLSearchParams(window.location.search);
-        const urlKeyword = params.get("search");
 
-        if (urlKeyword !== null) {
-            searchInput.value = urlKeyword;
-            searchLibrary();
+        // 검색어 유무에 따라 X 버튼 표시
+        function updateClearButton() {
+            clearButton.hidden = searchInput.value.length === 0;
         }
+
+        // 입력값 변경 감지
+        searchInput.addEventListener("input", updateClearButton);
+
+        // X 버튼 클릭
+        clearButton.addEventListener("click", () => {
+            searchInput.value = "";
+
+            const url = new URL(window.location.href);
+
+            url.searchParams.delete("search");
+            url.searchParams.delete("category");
+
+            history.pushState({}, "", url);
+
+            updateClearButton();
+            searchLibrary();
+            searchInput.focus();
+        });
+
+        // 최초 페이지 진입 시 버튼 상태 확인
+        updateClearButton();
+
+
+
+        // 검색어를 모두 지웠을 때 URL과 화면 초기화
+        searchInput.addEventListener("input", () => {
+            if (searchInput.value === "") {
+
+                const url = new URL(window.location.href);
+
+                url.searchParams.delete("search");
+                url.searchParams.delete("category");
+
+                if (url.href !== window.location.href) {
+                    history.pushState({}, "", url);
+                }
+
+                searchLibrary();
+            }
+        });
+
+
+
+        // ③ 현재 URL을 읽어서 화면 상태 복원
+        function restoreFromURL() {
+            const params = new URLSearchParams(window.location.search);
+
+            const urlKeyword = params.get("search");
+            const urlCategory = params.get("category");
+
+            if (urlKeyword !== null) {
+                searchInput.value = urlKeyword;
+                updateClearButton();
+                searchLibrary();
+
+            } else {
+                const validCategory = data.categories.some(
+                    (item) => item.id === urlCategory
+                );
+
+                const category = validCategory ? urlCategory : "all";
+
+                showCategory(category);
+            }
+        }
+
+        // 최초 페이지 진입
+        restoreFromURL();
+
+        // 브라우저 뒤로 가기 / 앞으로 가기
+        window.addEventListener("popstate", restoreFromURL);
+
 
 
     } catch (error) {

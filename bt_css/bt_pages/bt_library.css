@@ -138,6 +138,38 @@ form {
     font-weight: var(--bt-font-weight-regular);
 }
 
+.main-search input:-webkit-autofill,
+.sub-search input:-webkit-autofill {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: currentColor;
+}
+
+
+/* 브라우저 기본 X 버튼 숨김 */
+.main-search input::-webkit-search-cancel-button {
+    display: none;
+}
+
+/* 커스텀 X 버튼 */
+.main-search .bt-search-clear {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+
+    font-size: 24px;
+    line-height: 1;
+    color: #666;
+    cursor: pointer;
+}
+
+.main-search .bt-search-clear[hidden] {
+    display: none;
+}
+
+
+
 .main-search button {
     width: 25px;
     height: 25px;
