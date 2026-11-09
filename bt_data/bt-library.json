@@ -197,6 +197,182 @@
             "title": "Card",
             "description": "",
             "url": ""
+        },
+        {
+            "id": "patterns-header-footer",
+            "category": "patterns",
+            "subcategory": "header-footer",
+            "title": "Header & Footer",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "patterns-search-filter",
+            "category": "patterns",
+            "subcategory": "search-filter",
+            "title": "Search & Filter",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "patterns-gallery-slider",
+            "category": "patterns",
+            "subcategory": "gallery-slider",
+            "title": "Gallery & Slider",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "patterns-pagination",
+            "category": "patterns",
+            "subcategory": "pagination",
+            "title": "Pagination",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "patterns-responsive-ui",
+            "category": "patterns",
+            "subcategory": "responsive-ui",
+            "title": "Responsive UI",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "foundation-color",
+            "category": "foundation",
+            "subcategory": "color",
+            "title": "Color",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "foundation-typography",
+            "category": "foundation",
+            "subcategory": "typography",
+            "title": "Typography",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "foundation-spacing",
+            "category": "foundation",
+            "subcategory": "spacing",
+            "title": "Spacing",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "foundation-layout-grid",
+            "category": "foundation",
+            "subcategory": "layout-grid",
+            "title": "Layout & Grid",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "foundation-design-tokens",
+            "category": "foundation",
+            "subcategory": "design-tokens",
+            "title": "Design Tokens",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "guides-getting-started",
+            "category": "guides",
+            "subcategory": "getting-started",
+            "title": "Getting Started",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "guides-html-structure",
+            "category": "guides",
+            "subcategory": "html-structure",
+            "title": "HTML Structure",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "guides-css-architecture",
+            "category": "guides",
+            "subcategory": "css-architecture",
+            "title": "CSS Architecture",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "guides-javascript",
+            "category": "guides",
+            "subcategory": "javascript",
+            "title": "JavaScript",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "guides-accessibility",
+            "category": "guides",
+            "subcategory": "accessibility",
+            "title": "Accessibility",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "projects-diva-page",
+            "category": "projects",
+            "subcategory": "diva-page",
+            "title": "Diva Page",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "projects-mjm-modern-web",
+            "category": "projects",
+            "subcategory": "mjm-modern-web",
+            "title": "MJM Modern Web",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "projects-btday-showcase",
+            "category": "projects",
+            "subcategory": "btday-showcase",
+            "title": "BTDAY Showcase",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "portfolio-banner",
+            "category": "portfolio",
+            "subcategory": "banner",
+            "title": "Banner",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "portfolio-detail",
+            "category": "portfolio",
+            "subcategory": "detail",
+            "title": "Detail",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "portfolio-website",
+            "category": "portfolio",
+            "subcategory": "website",
+            "title": "Website",
+            "description": "",
+            "url": ""
+        },
+        {
+            "id": "portfolio-photo",
+            "category": "portfolio",
+            "subcategory": "photo",
+            "title": "Photo",
+            "description": "",
+            "url": ""
         }
     ]
 }

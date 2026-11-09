@@ -468,12 +468,6 @@
 }
 
 
-.subpage-prev {}
-
-
-.subpage-next {}
-
-
 /* 화살표 공통 */
 .subpage-pagenation>button img {
     display: block;
@@ -484,6 +478,49 @@
 .subpage-pagenation>button:last-child img {
     transform: rotate(180deg);
 }
+
+
+
+
+/* Pagination — 현재 페이지 */
+.subpage-pagenation-no button[aria-current="page"] {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Pagination — 일반 버튼 Hover */
+.subpage-pagenation-no button:hover:not([aria-current="page"]) {
+    background-color: #e8e8ff;
+    color: #222;
+}
+
+/* Pagination — 활성 버튼 Hover 유지 */
+.subpage-pagenation-no button[aria-current="page"]:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Pagination — 이전/다음 비활성화 */
+.subpage-pagenation .subpage-prev:disabled,
+.subpage-pagenation .subpage-next:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Pagination — 비활성 버튼 Hover 방지 */
+.subpage-pagenation .subpage-prev:disabled:hover,
+.subpage-pagenation .subpage-next:disabled:hover {
+    background-color: transparent;
+}
+
+.subpage-pagenation[hidden] {
+    display: none;
+}
+
+
+
+
+
 
 
 

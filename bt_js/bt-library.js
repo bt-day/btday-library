@@ -2,8 +2,7 @@
 
 
 
-
-function renderLibrary(items, emptyType = "category") {
+function renderLibrary(items, emptyType = "category", currentPage = 1, itemsPerPage = 6) {
     const list = document.querySelector(".subpage-subpd-box");
 
     if (!list) return;
@@ -27,19 +26,46 @@ function renderLibrary(items, emptyType = "category") {
                 </p>
             </li>
         `;
+
     } else {
-        // ② 기존 카드 출력
-        list.innerHTML = items.map((item) => `
-            <li>
-                <div class="subpd-box">
-                    <div class="subpd-box-innerbx"></div>
-                    <div class="subpd-boxinnertx"></div>
-                    <div class="subpd-boxinnertx"></div>
-                </div>
-                <h3>${item.title}</h3>
-            </li>
-        `).join("");
+        // 현재 정렬 기준 확인
+        const sortSelect = document.querySelector("#subpage-sort");
+        const sortType = sortSelect ? sortSelect.value : "default";
+
+        // 원본 배열 보호
+        const sortedItems = [...items];
+
+        if (sortType === "title-asc") {
+            sortedItems.sort((a, b) =>
+                a.title.localeCompare(b.title, "en")
+            );
+        }
+
+        if (sortType === "title-desc") {
+            sortedItems.sort((a, b) =>
+                b.title.localeCompare(a.title, "en")
+            );
+        }
+
+        // Pagination: 현재 페이지의 데이터 추출
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+
+        const pageItems = sortedItems.slice(startIndex, endIndex);
+
+        // 기존 카드 출력 코드 유지
+        list.innerHTML = pageItems.map((item) => `
+        <li>
+            <div class="subpd-box">
+                <div class="subpd-box-innerbx"></div>
+                <div class="subpd-boxinnertx"></div>
+                <div class="subpd-boxinnertx"></div>
+            </div>
+            <h3>${item.title}</h3>
+        </li>
+    `).join("");
     }
+
 
     // ③ 실제 결과 수 갱신
     const count = document.querySelector("#subpage-count");
@@ -48,8 +74,6 @@ function renderLibrary(items, emptyType = "category") {
         count.textContent = items.length;
     }
 }
-
-
 
 
 
@@ -90,6 +114,10 @@ async function loadLibrary() {
             portfolio: "Discover creative works"
         };
 
+        // Pagination 상태
+        let currentPage = 1;
+        const itemsPerPage = 6;
+
         console.log("BTDAY Library 데이터:", data);
         console.log("카테고리:", data.categories);
         console.log("카드 목록:", data.items);
@@ -102,6 +130,90 @@ async function loadLibrary() {
         const searchInput = document.querySelector("#search");
         const clearButton = document.querySelector(".bt-search-clear");
 
+        // 현재 화면의 데이터 상태
+        let currentItems = data.items;
+        let currentEmptyType = "category";
+
+
+        // 현재 페이지 데이터 렌더링
+        function renderCurrentPage() {
+            renderLibrary(
+                currentItems,
+                currentEmptyType,
+                currentPage,
+                itemsPerPage
+            );
+            renderPagination();
+        }
+
+
+        // Pagination 페이지 번호 출력
+        function renderPagination() {
+            const pagination = document.querySelector(".subpage-pagenation");
+            const pageNumbers = document.querySelector(".subpage-pagenation-no");
+            const prevButton = document.querySelector(".subpage-prev");
+            const nextButton = document.querySelector(".subpage-next");
+
+            const totalPages = Math.ceil(currentItems.length / itemsPerPage);
+
+            // 한 페이지 이하라면 페이지네이션 숨김
+            pagination.hidden = totalPages <= 1;
+
+            // 페이지 번호 생성
+            pageNumbers.innerHTML = Array.from(
+                { length: totalPages },
+                (_, index) => {
+                    const page = index + 1;
+
+                    return `
+                <button
+                    type="button"
+                    data-page="${page}"
+                    ${page === currentPage ? 'aria-current="page"' : ""}
+                >
+                    ${page}
+                </button>
+            `;
+                }
+            ).join("");
+
+            // 이전 / 다음 버튼 상태
+            prevButton.disabled = currentPage === 1;
+            nextButton.disabled = currentPage === totalPages;
+        }
+
+
+        const pageNumbers = document.querySelector(".subpage-pagenation-no");
+        const prevButton = document.querySelector(".subpage-prev");
+        const nextButton = document.querySelector(".subpage-next");
+
+        // 페이지 번호 클릭
+        pageNumbers.addEventListener("click", (event) => {
+            const button = event.target.closest("[data-page]");
+            if (!button) return;
+
+            currentPage = Number(button.dataset.page);
+            renderCurrentPage();
+        });
+
+        // 이전 페이지
+        prevButton.addEventListener("click", () => {
+            if (currentPage <= 1) return;
+
+            currentPage--;
+            renderCurrentPage();
+        });
+
+        // 다음 페이지
+        nextButton.addEventListener("click", () => {
+            const totalPages = Math.ceil(currentItems.length / itemsPerPage);
+
+            if (currentPage >= totalPages) return;
+
+            currentPage++;
+            renderCurrentPage();
+        });
+
 
 
         // ① 카테고리 화면 처리: URL은 변경하지 않음
@@ -113,7 +225,14 @@ async function loadLibrary() {
                 ? data.items
                 : data.items.filter((item) => item.category === category);
 
-            renderLibrary(filteredItems);
+            // 현재 목록 상태 갱신
+            currentItems = filteredItems;
+            currentEmptyType = "category";
+            currentPage = 1;
+
+            // 현재 페이지 출력
+            renderCurrentPage();
+
 
             buttons.forEach((button) => {
                 button.classList.toggle(
@@ -160,7 +279,6 @@ async function loadLibrary() {
 
 
 
-
         function searchLibrary() {
             const keyword = searchInput.value.trim().toLowerCase();
 
@@ -168,7 +286,13 @@ async function loadLibrary() {
                 return item.title.toLowerCase().includes(keyword);
             });
 
-            renderLibrary(searchedItems, "search");
+            // 현재 검색 결과 상태 갱신
+            currentItems = searchedItems;
+            currentEmptyType = "search";
+            currentPage = 1;
+
+            // 현재 페이지 출력
+            renderCurrentPage();
 
             if (keyword) {
                 renderPageTitle(
@@ -278,6 +402,17 @@ async function loadLibrary() {
                 showCategory(category);
             }
         }
+
+
+        // Sort 셀렉터 상태 변경
+        const sortSelect = document.querySelector("#subpage-sort");
+
+        if (sortSelect) {
+            sortSelect.addEventListener("change", () => {
+                restoreFromURL();
+            });
+        }
+
 
         // 최초 페이지 진입
         restoreFromURL();
