@@ -116,7 +116,7 @@ async function loadLibrary() {
 
         // Pagination 상태
         let currentPage = 1;
-        const itemsPerPage = 6;
+        const itemsPerPage = 12;
 
         console.log("BTDAY Library 데이터:", data);
         console.log("카테고리:", data.categories);

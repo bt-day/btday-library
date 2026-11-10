@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>btday-2depth page</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS : 서브 공통페이지 -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-subpage-list.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-main-common">
+                <div class="sub-main-common-title">
+                    <h3>2depth list page</h3>
+                    <p>Browse all resources</p>
+                </div>
+
+                <ul class="sub-keyword">
+                    <li><button type="button" class="is-active" data-category="components">Basic Dropdown</button></li>
+                    <li><button type="button" data-category="patterns">Mega Menu</button></li>
+                    <li><button type="button" data-category="foundation">Mobile Drawer </button></li>
+                </ul>
+
+                <form role="search" class="sub-search">
+                    <label for="search" class="blind">라이브러리 검색</label>
+                    <input id="search" type="search" name="search" placeholder="Search BTDAY Library"
+                        autocomplete="off">
+                    <!-- 검색어 초기화 -->
+                    <button type="button" class="bt-search-clear" aria-label="검색어 지우기" hidden>×</button>
+                    <button type="submit" aria-label="검색"><img src="bt_assets/icon-svg/search.svg" alt="" /></button>
+                </form>
+
+                <!-- 상품 결과 및 정렬 -->
+                <div class="subpage-results-toolbar">
+                    <p class="subpage-results-count">
+                        총 <strong id="subpage-count">0</strong> results
+                    </p>
+                    <div class="subpage-sort">
+                        <label for="subpage-sort" class="sr-only">
+                            상품 정렬 기준
+                        </label>
+                        <select id="subpage-sort">
+                            <option value="default">Default</option>
+                            <option value="title-asc">A–Z</option>
+                            <option value="title-desc">Z–A</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="subpage_underline"></div>
+
+                <ul class="subpage-list-box">
+                    <li>
+                        <div class="subpage-list-icon"></div>
+                        <div class="subpage-list-cont">
+                            <h3>Basic Dropdown Navigation</h3>
+                            <p>
+                                A responsive dropdown navigation component supporting hover, keyboard focus, and mobile
+                                accordion interactions. Designed for clear menu hierarchy and seamless navigation across
+                                devices.
+                            </p>
+                        </div>
+                        <div class="subpage-list-meta">
+                            <p>v1.0 · Ready</p>
+                            <a href="">View Details</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="subpage-list-icon"></div>
+                        <div class="subpage-list-cont">
+                            <h3>Basic Dropdown Navigation</h3>
+                            <p>
+                                A responsive dropdown navigation component supporting hover, keyboard focus, and mobile
+                                accordion interactions. Designed for clear menu hierarchy and seamless navigation across
+                                devices.
+                            </p>
+                        </div>
+                        <div class="subpage-list-meta">
+                            <p>v1.0 · Ready</p>
+                            <a href="">View Details</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="subpage-list-icon"></div>
+                        <div class="subpage-list-cont">
+                            <h3>Basic Dropdown Navigation</h3>
+                            <p>
+                                A responsive dropdown navigation component supporting hover, keyboard focus, and mobile
+                                accordion interactions. Designed for clear menu hierarchy and seamless navigation across
+                                devices.
+                            </p>
+                        </div>
+                        <div class="subpage-list-meta">
+                            <p>v1.0 · Ready</p>
+                            <a href="">View Details</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="subpage-pagenation">
+                    <button type="button" class="subpage-prev">
+                        <img src="bt_assets/icon-svg/arrow00.svg" alt="" />
+                    </button>
+                    <div class="subpage-pagenation-no">
+                    </div>
+                    <button type="button" class="subpage-next">
+                        <img src="bt_assets/icon-svg/arrow00.svg" alt="" />
+                    </button>
+                </div>
+
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+        <!-- 서브페이지 라이브러리 데이터 -->
+        <script src="bt_js/bt-library.js"></script>
+    </body>
+
+</html>
