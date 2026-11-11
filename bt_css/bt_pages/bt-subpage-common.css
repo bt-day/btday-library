@@ -163,6 +163,66 @@
 }
 
 
+
+
+/* svg 아이콘 적용 */
+/* 기존 버튼에 없는 속성만 추가 */
+.sub-keyword button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* 아이콘 공통 규칙 */
+.bt-keyword-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+
+    background-color: currentColor;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+/* 아이콘 개별 지정 */
+.bt-keyword-icon--components {
+    -webkit-mask-image: url("../../bt_assets/1depth/components.svg");
+    mask-image: url("../../bt_assets/1depth/components.svg");
+}
+
+.bt-keyword-icon--patterns {
+    -webkit-mask-image: url("../../bt_assets/1depth/patterns.svg");
+    mask-image: url("../../bt_assets/1depth/patterns.svg");
+}
+
+.bt-keyword-icon--aicreation {
+    -webkit-mask-image: url("../../bt_assets/1depth/aicreation.svg");
+    mask-image: url("../../bt_assets/1depth/aicreation.svg");
+}
+
+.bt-keyword-icon--projects {
+    -webkit-mask-image: url("../../bt_assets/1depth/projects.svg");
+    mask-image: url("../../bt_assets/1depth/projects.svg");
+}
+
+.bt-keyword-icon--portfolio {
+    -webkit-mask-image: url("../../bt_assets/1depth/portfolio.svg");
+    mask-image: url("../../bt_assets/1depth/portfolio.svg");
+}
+
+
+
+
+
+
+
 /* 선택된 상태 */
 .sub-keyword>li>button.is-active {
     background-color: #1a1a1a;
@@ -492,6 +552,7 @@
 }
 
 
+
 /* 화살표 공통 */
 .subpage-pagenation>button img {
     display: block;
@@ -502,8 +563,6 @@
 .subpage-pagenation>button:last-child img {
     transform: rotate(180deg);
 }
-
-
 
 
 /* Pagination — 현재 페이지 */

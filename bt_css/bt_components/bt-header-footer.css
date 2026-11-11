@@ -67,7 +67,7 @@ header nav ul {
 
 header nav>ul>li {
     position: relative;
-    flex: 0 1 160px;
+    flex: 0 1 180px;
     min-width: 0;
 
     display: flex;
@@ -141,6 +141,24 @@ header nav>ul>li:has(> .sub-2depth):focus-within::after {
     background-color: rgba(211, 221, 246, 0.5);
     font-weight: var(--bt-font-weight-regular);
 }
+
+
+
+/* PC GNB 2Depth 링크 */
+.bt-nav-icon {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+}
+
+/* 기존 2Depth 링크 선택자에 추가할 속성 */
+.sub-2depth>li>a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
 
 /* 1. 기본 상태 — 2Depth 숨김 */
 .sub-2depth {
@@ -233,8 +251,6 @@ header nav ul>li:focus-within>.sub-2depth {
         overflow: hidden;
     }
 
-
-
     .bt-mobile-navi h3 {
         width: min(calc(100% - 60px), 1000px);
         margin-inline: auto;
@@ -320,6 +336,23 @@ header nav ul>li:focus-within>.sub-2depth {
         align-items: flex-start;
         gap: var(--bt-space-16);
     }
+
+    /* 모바일 2뎁스 아이콘 적용 */
+    .sub-2depth-mo>li>a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: var(--bt-space-8);
+    }
+
+    .bt-nav-icon {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
+    }
+
+
 
     .bt-mobile-navi .sub-2depth-mo[hidden] {
         display: none;
