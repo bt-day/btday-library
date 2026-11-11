@@ -240,8 +240,6 @@
 
 
 
-
-
 .sub-search button {
     width: 25px;
     height: 25px;
@@ -350,6 +348,29 @@
     /* li는 Flex Item으로서 너비를 결정 */
 }
 
+
+/* 카드 전체 클릭 영역 */
+.subpage-subpd-box>li {
+    position: relative;
+}
+
+.subpage-subpd-box .bt-card-hitarea {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+}
+
+/* 키보드 포커스 표시 */
+.subpage-subpd-box .bt-card-hitarea:focus-visible {
+    outline: 3px solid #222;
+    outline-offset: 3px;
+}
+
+
+
+
+
 .subpage-subpd-box>li>.subpd-box {
     width: 100%;
     aspect-ratio: 340 / 200;
@@ -448,6 +469,9 @@
 }
 
 
+
+
+
 /*  페이지네이션 적용    */
 .subpage-pagenation {
     display: flex;
@@ -536,7 +560,7 @@
 @media (max-width:790px) {
     .sub-keyword {
         overflow-x: auto;
-        justify-content: flex-start;
+        justify-content: safe center;
         width: min(calc(100% - 40px), 860px);
 
         scrollbar-width: none;
@@ -573,6 +597,8 @@
         flex: 0 1 calc((100% - 20px) / 2);
         min-width: 0;
     }
+
+
 
 }
 

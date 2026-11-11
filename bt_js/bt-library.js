@@ -53,17 +53,25 @@ function renderLibrary(items, emptyType = "category", currentPage = 1, itemsPerP
 
         const pageItems = sortedItems.slice(startIndex, endIndex);
 
-        // 기존 카드 출력 코드 유지
+        // 카드 출력 + 2Depth 링크 연결
         list.innerHTML = pageItems.map((item) => `
-        <li>
-            <div class="subpd-box">
-                <div class="subpd-box-innerbx"></div>
-                <div class="subpd-boxinnertx"></div>
-                <div class="subpd-boxinnertx"></div>
-            </div>
-            <h3>${item.title}</h3>
-        </li>
-    `).join("");
+            <li>
+                ${item.url ? `
+                    <a
+                        class="bt-card-hitarea"
+                        href="${item.url}"
+                        aria-label="${item.title} 목록 보기"
+                    ></a>
+                ` : ""}
+
+                <div class="subpd-box">
+                    <div class="subpd-box-innerbx"></div>
+                    <div class="subpd-boxinnertx"></div>
+                    <div class="subpd-boxinnertx"></div>
+                </div>
+                <h3>${item.title}</h3>
+            </li>
+        `).join("");
     }
 
 
@@ -108,8 +116,7 @@ async function loadLibrary() {
         const categorySubtitles = {
             components: "Explore reusable UI components",
             patterns: "Discover interface patterns",
-            foundation: "Explore design foundations",
-            guides: "Browse practical guides",
+            aicreation: "Explore design AI Creation",
             projects: "Explore our web projects",
             portfolio: "Discover creative works"
         };

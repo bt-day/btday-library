@@ -57,54 +57,20 @@
             ]
         },
         {
-            "id": "foundation",
-            "label": "Foundation",
+            "id": "aicreation",
+            "label": "AI Creation",
             "children": [
                 {
-                    "id": "color",
-                    "label": "Color"
+                    "id": "shorts-video",
+                    "label": "Shorts-video"
                 },
                 {
-                    "id": "typography",
-                    "label": "Typography"
+                    "id": "product-composite",
+                    "label": "Product-composite"
                 },
                 {
-                    "id": "spacing",
-                    "label": "Spacing"
-                },
-                {
-                    "id": "layout-grid",
-                    "label": "Layout & Grid"
-                },
-                {
-                    "id": "design-tokens",
-                    "label": "Design Tokens"
-                }
-            ]
-        },
-        {
-            "id": "guides",
-            "label": "Guides",
-            "children": [
-                {
-                    "id": "getting-started",
-                    "label": "Getting Started"
-                },
-                {
-                    "id": "html-structure",
-                    "label": "HTML Structure"
-                },
-                {
-                    "id": "css-architecture",
-                    "label": "CSS Architecture"
-                },
-                {
-                    "id": "javascript",
-                    "label": "JavaScript"
-                },
-                {
-                    "id": "accessibility",
-                    "label": "Accessibility"
+                    "id": "product-detail-page",
+                    "label": "Product-detail-page"
                 }
             ]
         },
@@ -156,7 +122,7 @@
             "subcategory": "navigation",
             "title": "Navigation",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=components&subcategory=navigation"
         },
         {
             "id": "component-button",
@@ -164,7 +130,7 @@
             "subcategory": "button",
             "title": "Button",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=components&subcategory=button"
         },
         {
             "id": "component-form-input",
@@ -172,7 +138,7 @@
             "subcategory": "form-input",
             "title": "Form & Input",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=components&subcategory=form-input"
         },
         {
             "id": "component-modal-popup",
@@ -180,7 +146,7 @@
             "subcategory": "modal-popup",
             "title": "Modal & Popup",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=components&subcategory=modal-popup"
         },
         {
             "id": "component-table-board",
@@ -188,7 +154,7 @@
             "subcategory": "table-board",
             "title": "Table & Board",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=components&subcategory=table-board"
         },
         {
             "id": "component-card",
@@ -196,7 +162,7 @@
             "subcategory": "card",
             "title": "Card",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=components&subcategory=card"
         },
         {
             "id": "patterns-header-footer",
@@ -204,7 +170,7 @@
             "subcategory": "header-footer",
             "title": "Header & Footer",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=patterns&subcategory=header-footer"
         },
         {
             "id": "patterns-search-filter",
@@ -212,7 +178,7 @@
             "subcategory": "search-filter",
             "title": "Search & Filter",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=patterns&subcategory=search-filter"
         },
         {
             "id": "patterns-gallery-slider",
@@ -220,7 +186,7 @@
             "subcategory": "gallery-slider",
             "title": "Gallery & Slider",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=patterns&subcategory=gallery-slider"
         },
         {
             "id": "patterns-pagination",
@@ -228,7 +194,7 @@
             "subcategory": "pagination",
             "title": "Pagination",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=patterns&subcategory=pagination"
         },
         {
             "id": "patterns-responsive-ui",
@@ -236,87 +202,31 @@
             "subcategory": "responsive-ui",
             "title": "Responsive UI",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=patterns&subcategory=responsive-ui"
         },
         {
-            "id": "foundation-color",
-            "category": "foundation",
-            "subcategory": "color",
-            "title": "Color",
+            "id": "aicreation-shorts-video",
+            "category": "aicreation",
+            "subcategory": "shorts-video",
+            "title": "Shorts-video",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=aicreation&subcategory=shorts-video"
         },
         {
-            "id": "foundation-typography",
-            "category": "foundation",
-            "subcategory": "typography",
-            "title": "Typography",
+            "id": "aicreation-product-composite",
+            "category": "aicreation",
+            "subcategory": "product-composite",
+            "title": "Product-composite",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=aicreation&subcategory=product-composite"
         },
         {
-            "id": "foundation-spacing",
-            "category": "foundation",
-            "subcategory": "spacing",
-            "title": "Spacing",
+            "id": "aicreation-product-detail-page",
+            "category": "aicreation",
+            "subcategory": "product-detail-page",
+            "title": "Product-detail-page",
             "description": "",
-            "url": ""
-        },
-        {
-            "id": "foundation-layout-grid",
-            "category": "foundation",
-            "subcategory": "layout-grid",
-            "title": "Layout & Grid",
-            "description": "",
-            "url": ""
-        },
-        {
-            "id": "foundation-design-tokens",
-            "category": "foundation",
-            "subcategory": "design-tokens",
-            "title": "Design Tokens",
-            "description": "",
-            "url": ""
-        },
-        {
-            "id": "guides-getting-started",
-            "category": "guides",
-            "subcategory": "getting-started",
-            "title": "Getting Started",
-            "description": "",
-            "url": ""
-        },
-        {
-            "id": "guides-html-structure",
-            "category": "guides",
-            "subcategory": "html-structure",
-            "title": "HTML Structure",
-            "description": "",
-            "url": ""
-        },
-        {
-            "id": "guides-css-architecture",
-            "category": "guides",
-            "subcategory": "css-architecture",
-            "title": "CSS Architecture",
-            "description": "",
-            "url": ""
-        },
-        {
-            "id": "guides-javascript",
-            "category": "guides",
-            "subcategory": "javascript",
-            "title": "JavaScript",
-            "description": "",
-            "url": ""
-        },
-        {
-            "id": "guides-accessibility",
-            "category": "guides",
-            "subcategory": "accessibility",
-            "title": "Accessibility",
-            "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=aicreation&subcategory=product-detail-page"
         },
         {
             "id": "projects-diva-page",
@@ -324,7 +234,7 @@
             "subcategory": "diva-page",
             "title": "Diva Page",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=projects&subcategory=diva-page"
         },
         {
             "id": "projects-mjm-modern-web",
@@ -332,7 +242,7 @@
             "subcategory": "mjm-modern-web",
             "title": "MJM Modern Web",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=projects&subcategory=mjm-modern-web"
         },
         {
             "id": "projects-btday-showcase",
@@ -340,7 +250,7 @@
             "subcategory": "btday-showcase",
             "title": "BTDAY Showcase",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=projects&subcategory=btday-showcase"
         },
         {
             "id": "portfolio-banner",
@@ -348,7 +258,7 @@
             "subcategory": "banner",
             "title": "Banner",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=portfolio&subcategory=banner"
         },
         {
             "id": "portfolio-detail",
@@ -356,7 +266,7 @@
             "subcategory": "detail",
             "title": "Detail",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=portfolio&subcategory=detail"
         },
         {
             "id": "portfolio-website",
@@ -364,7 +274,7 @@
             "subcategory": "website",
             "title": "Website",
             "description": "",
-            "url": ""
+            "url": "bt-subpage-list.html?category=portfolio&subcategory=website"
         },
         {
             "id": "portfolio-photo",
@@ -372,6 +282,404 @@
             "subcategory": "photo",
             "title": "Photo",
             "description": "",
+            "url": "bt-subpage-list.html?category=portfolio&subcategory=photo"
+        }
+    ],
+    "entries": [
+        {
+            "id": "navigation-basic-dropdown",
+            "category": "components",
+            "subcategory": "navigation",
+            "variant": "basic-dropdown",
+            "title": "Basic Dropdown Navigation",
+            "description": "A responsive dropdown navigation component supporting hover, keyboard focus, and mobile accordion interactions.",
+            "thumbnail": "",
+            "version": "1.0",
+            "status": "ready",
+            "url": ""
+        },
+        {
+            "id": "navigation-mega-menu",
+            "category": "components",
+            "subcategory": "navigation",
+            "variant": "mega-menu",
+            "title": "Mega Menu Navigation",
+            "description": "A flexible multi-column navigation system supporting multiple menu levels and responsive layouts.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "navigation-mobile-drawer",
+            "category": "components",
+            "subcategory": "navigation",
+            "variant": "mobile-drawer",
+            "title": "Mobile Drawer Navigation",
+            "description": "An off-canvas mobile navigation component with expandable accordion menus.",
+            "thumbnail": "",
+            "version": "1.0",
+            "status": "ready",
+            "url": ""
+        },
+        {
+            "id": "button-primary",
+            "category": "components",
+            "subcategory": "button",
+            "variant": "primary",
+            "title": "Primary Button",
+            "description": "A primary action button with responsive states.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "button-outline",
+            "category": "components",
+            "subcategory": "button",
+            "variant": "outline",
+            "title": "Outline Button",
+            "description": "An outlined button for secondary actions.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "button-icon",
+            "category": "components",
+            "subcategory": "button",
+            "variant": "icon",
+            "title": "Icon Button",
+            "description": "An icon-based button for compact interfaces.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "form-login",
+            "category": "components",
+            "subcategory": "form-input",
+            "variant": "login",
+            "title": "Login Form",
+            "description": "A login form with validation and input states.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "form-search",
+            "category": "components",
+            "subcategory": "form-input",
+            "variant": "search",
+            "title": "Search Input",
+            "description": "A search field with submit and clear controls.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "form-custom-select",
+            "category": "components",
+            "subcategory": "form-input",
+            "variant": "custom-select",
+            "title": "Custom Select",
+            "description": "A selectable list with keyboard interaction.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "modal-basic",
+            "category": "components",
+            "subcategory": "modal-popup",
+            "variant": "basic",
+            "title": "Basic Modal",
+            "description": "A dialog overlay with open and close controls.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "modal-confirm",
+            "category": "components",
+            "subcategory": "modal-popup",
+            "variant": "confirm",
+            "title": "Confirm Dialog",
+            "description": "A confirmation dialog with action buttons.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "modal-image",
+            "category": "components",
+            "subcategory": "modal-popup",
+            "variant": "image",
+            "title": "Image Popup",
+            "description": "An image preview popup for gallery content.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "table-data",
+            "category": "components",
+            "subcategory": "table-board",
+            "variant": "data-table",
+            "title": "Data Table",
+            "description": "A structured table for displaying data records.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "table-board-list",
+            "category": "components",
+            "subcategory": "table-board",
+            "variant": "board-list",
+            "title": "Board List",
+            "description": "A responsive board listing with row layouts.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "table-board-detail",
+            "category": "components",
+            "subcategory": "table-board",
+            "variant": "board-detail",
+            "title": "Board Detail",
+            "description": "A detail view for board content and metadata.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "card-product",
+            "category": "components",
+            "subcategory": "card",
+            "variant": "product",
+            "title": "Product Card",
+            "description": "A product preview card with image and information.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "card-info",
+            "category": "components",
+            "subcategory": "card",
+            "variant": "info",
+            "title": "Info Card",
+            "description": "An information card for reusable content blocks.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "card-profile",
+            "category": "components",
+            "subcategory": "card",
+            "variant": "profile",
+            "title": "Profile Card",
+            "description": "A profile card with identity and supporting details.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "patterns-header-basic",
+            "category": "patterns",
+            "subcategory": "header-footer",
+            "variant": "basic-header",
+            "title": "Basic Header",
+            "description": "A responsive header pattern with navigation and utility controls.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "patterns-search-filter-basic",
+            "category": "patterns",
+            "subcategory": "search-filter",
+            "variant": "combined-search",
+            "title": "Search & Filter Pattern",
+            "description": "An interactive search and filter pattern combining keyword search, category selection, and dynamic result updates.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "patterns-gallery-slider-basic",
+            "category": "patterns",
+            "subcategory": "gallery-slider",
+            "variant": "image-gallery",
+            "title": "Gallery & Slider Pattern",
+            "description": "A responsive gallery pattern featuring image transitions, thumbnail navigation, and interactive slider controls.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "patterns-pagination-basic",
+            "category": "patterns",
+            "subcategory": "pagination",
+            "variant": "numbered-pagination",
+            "title": "Numbered Pagination Pattern",
+            "description": "A reusable pagination pattern with page number navigation, previous and next controls, and dynamic list updates.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "patterns-responsive-ui-basic",
+            "category": "patterns",
+            "subcategory": "responsive-ui",
+            "variant": "responsive-layout",
+            "title": "Responsive UI Pattern",
+            "description": "Adaptive interface patterns that reorganize layouts, navigation, and content across desktop, tablet, and mobile screens.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "aicreation-shorts-video",
+            "category": "aicreation",
+            "subcategory": "shorts-video",
+            "variant": "product-showcase",
+            "title": "Product Showcase Shorts",
+            "description": "AI-generated short-form product videos combining product visuals, model imagery, and creative motion for digital campaigns.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "aicreation-product-composite",
+            "category": "aicreation",
+            "subcategory": "product-composite",
+            "variant": "ai-model",
+            "title": "AI Model Product Composite",
+            "description": "Creative product imagery combining AI-generated models with product photography for advertising and digital commerce.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "aicreation-product-detail-page",
+            "category": "aicreation",
+            "subcategory": "product-detail-page",
+            "variant": "product-detail",
+            "title": "AI Product Detail Design",
+            "description": "E-commerce product detail page designs using AI-generated visuals, product storytelling, and structured content layouts.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "projects-diva-page",
+            "category": "projects",
+            "subcategory": "diva-page",
+            "variant": "modern-web",
+            "title": "Diva Page — Modern Web Project",
+            "description": "A responsive modern web project featuring reusable UI components, interactive navigation, image galleries, and structured page layouts.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "projects-mjm-modern-web",
+            "category": "projects",
+            "subcategory": "mjm-modern-web",
+            "variant": "corporate-web",
+            "title": "MJM Modern Web Project",
+            "description": "A corporate website modernization project focused on responsive layouts, structured content, reusable UI patterns, and consistent design rules.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "projects-btday-showcase",
+            "category": "projects",
+            "subcategory": "btday-showcase",
+            "variant": "component-library",
+            "title": "BTDAY Component Library",
+            "description": "A reusable UI library project combining responsive components, interactive patterns, JSON-driven content, and common page structures.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "portfolio-banner",
+            "category": "portfolio",
+            "subcategory": "banner",
+            "variant": "campaign-banner",
+            "title": "Campaign Banner Design",
+            "description": "A collection of promotional banners featuring visual storytelling, brand messaging, and digital campaign design.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "portfolio-detail",
+            "category": "portfolio",
+            "subcategory": "detail",
+            "variant": "product-detail",
+            "title": "Product Detail Page Design",
+            "description": "E-commerce product detail designs focused on product presentation, information hierarchy, and conversion-oriented layouts.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "portfolio-website",
+            "category": "portfolio",
+            "subcategory": "website",
+            "variant": "web-design",
+            "title": "Website Design Collection",
+            "description": "Selected website design works featuring responsive layouts, brand identity, visual consistency, and user-centered interfaces.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
+            "url": ""
+        },
+        {
+            "id": "portfolio-photo",
+            "category": "portfolio",
+            "subcategory": "photo",
+            "variant": "photo-editing",
+            "title": "Photography & Retouching",
+            "description": "Commercial photography and image editing works focusing on product presentation, color correction, and visual composition.",
+            "thumbnail": "",
+            "version": "",
+            "status": "planned",
             "url": ""
         }
     ]

@@ -334,7 +334,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: var(--bt-space-16);
 }
 
@@ -347,13 +347,51 @@
     /*
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px); */
+}
 
+
+
+/* 링크: 내부 콘텐츠 배치 담당 */
+.subpage-list-box>li>a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: var(--bt-space-28);
+
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
 }
+
+
+
+
+/* 2Depth 검색 결과 없음 */
+.subpage-list-box>.subpage-list-empty {
+    min-height: 220px;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    text-align: center;
+}
+
+.subpage-list-empty>p {
+    font-size: var(--bt-font-size-18);
+    font-weight: var(--bt-font-weight-bold);
+}
+
+.subpage-list-empty>span {
+    font-size: var(--bt-font-size-14);
+    color: #666;
+}
+
+
 
 .subpage-list-icon {
     flex: 0 1 auto;
@@ -397,11 +435,15 @@
     line-height: var(--bt-line-height-tight);
 }
 
-.subpage-list-meta>a {
+.subpage-list-meta>a,
+.subpage-list-meta>span {
     font-size: clamp(var(--bt-font-size-12), calc(1.5vw + 1rem), var(--bt-font-size-14));
     font-weight: var(--bt-font-weight-bold);
     line-height: var(--bt-line-height-tight);
 }
+
+
+
 
 
 
@@ -480,8 +522,6 @@
 
 
 
-
-
 /*  미디어쿼리 분기  */
 @media (max-width:1186px) {
     .subpage-results-toolbar {
@@ -493,7 +533,7 @@
 @media (max-width:790px) {
     .sub-keyword {
         overflow-x: auto;
-        justify-content: flex-start;
+        justify-content: safe center;
         width: min(calc(100% - 40px), 860px);
 
         scrollbar-width: none;
@@ -515,10 +555,16 @@
         min-width: 0;
     }
 
+    .sub-main-common-title>h3 {
+        text-align: center;
+    }
+
+
 }
 
+
 @media (max-width:640px) {
-    .subpage-list-box>li {
+    .subpage-list-box>li>a {
         flex-direction: column;
         align-items: flex-start;
     }

@@ -26,9 +26,9 @@ const galleryData = [
     },
     {
         image: "bt_assets/images/bt-hero-gallery03-2560x1200.jpg",
-        category: "FOUNDATION",
-        title: "Strong Foundations, Consistent Design.",
-        description: "A scalable design foundation built on reusable tokens, typography, spacing, and layout principles to create consistent and maintainable web interfaces."
+        category: "PORTFOLIO",
+        title: "Creative Works, Meaningful Experiences.",
+        description: "A curated collection of design, branding, and digital projects, combining creative vision, practical execution, and real-world experience to deliver impactful visual experiences."
     },
     {
         image: "bt_assets/images/bt-hero-gallery04-2560x1200.jpg",
@@ -45,7 +45,7 @@ let currentSlide = 0;
 let activeLayer = 0;
 let isTransitioning = false;
 
-const slideDuration = 2000; // 5초
+const slideDuration = 2000; // 2초
 const progressBars = document.querySelectorAll(".bt-slider-progress__bar");
 let autoRollingTimer = null;
 let progressAnimation = null;
@@ -53,7 +53,6 @@ let progressAnimation = null;
 
 gallerySlides[0].style.backgroundImage =
     `url("${galleryData[0].image}")`;
-
 
 
 function updateHeroContent(index) {
@@ -168,6 +167,9 @@ progressButtons.forEach((button, index) => {
 });
 
 
+
+// 최초 Hero 텍스트 출력
+updateHeroContent(currentSlide);
 
 startAutoRolling();
 

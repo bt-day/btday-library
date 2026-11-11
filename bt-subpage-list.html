@@ -41,15 +41,13 @@
                     <p>Browse all resources</p>
                 </div>
 
+                <!--서브 키워드 필터 버튼 적용-->
                 <ul class="sub-keyword">
-                    <li><button type="button" class="is-active" data-category="components">Basic Dropdown</button></li>
-                    <li><button type="button" data-category="patterns">Mega Menu</button></li>
-                    <li><button type="button" data-category="foundation">Mobile Drawer </button></li>
                 </ul>
 
-                <form role="search" class="sub-search">
-                    <label for="search" class="blind">라이브러리 검색</label>
-                    <input id="search" type="search" name="search" placeholder="Search BTDAY Library"
+                <form role="search" class="sub-search" id="bt-list-search-form">
+                    <label for="bt-list-search-input" class="blind">라이브러리 검색</label>
+                    <input id="bt-list-search-input" type="search" name="search" placeholder="Search BTDAY Library"
                         autocomplete="off">
                     <!-- 검색어 초기화 -->
                     <button type="button" class="bt-search-clear" aria-label="검색어 지우기" hidden>×</button>
@@ -74,53 +72,8 @@
                 </div>
                 <div class="subpage_underline"></div>
 
-                <ul class="subpage-list-box">
-                    <li>
-                        <div class="subpage-list-icon"></div>
-                        <div class="subpage-list-cont">
-                            <h3>Basic Dropdown Navigation</h3>
-                            <p>
-                                A responsive dropdown navigation component supporting hover, keyboard focus, and mobile
-                                accordion interactions. Designed for clear menu hierarchy and seamless navigation across
-                                devices.
-                            </p>
-                        </div>
-                        <div class="subpage-list-meta">
-                            <p>v1.0 · Ready</p>
-                            <a href="">View Details</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="subpage-list-icon"></div>
-                        <div class="subpage-list-cont">
-                            <h3>Basic Dropdown Navigation</h3>
-                            <p>
-                                A responsive dropdown navigation component supporting hover, keyboard focus, and mobile
-                                accordion interactions. Designed for clear menu hierarchy and seamless navigation across
-                                devices.
-                            </p>
-                        </div>
-                        <div class="subpage-list-meta">
-                            <p>v1.0 · Ready</p>
-                            <a href="">View Details</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="subpage-list-icon"></div>
-                        <div class="subpage-list-cont">
-                            <h3>Basic Dropdown Navigation</h3>
-                            <p>
-                                A responsive dropdown navigation component supporting hover, keyboard focus, and mobile
-                                accordion interactions. Designed for clear menu hierarchy and seamless navigation across
-                                devices.
-                            </p>
-                        </div>
-                        <div class="subpage-list-meta">
-                            <p>v1.0 · Ready</p>
-                            <a href="">View Details</a>
-                        </div>
-                    </li>
-                </ul>
+                <!-- 2Depth JSON 목록 출력 영역 -->
+                <ul class="subpage-list-box"></ul>
 
                 <div class="subpage-pagenation">
                     <button type="button" class="subpage-prev">
@@ -144,8 +97,10 @@
         <script src="bt_js/bt-header.js"></script>
         <script src="bt_js/bt-mobile-nav.js"></script>
         <script src="bt_js/bt-include.js"></script>
-        <!-- 서브페이지 라이브러리 데이터 -->
-        <script src="bt_js/bt-library.js"></script>
+
+        <!-- 2Depth 전용 AJAX -->
+        <script src="bt_js/bt-subpage-list.js"></script>
+
     </body>
 
 </html>
