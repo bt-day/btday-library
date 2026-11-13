@@ -1,0 +1,178 @@
+/* btday  sub template  */
+
+
+.bt-wrapper {
+    position: relative;
+    isolation: isolate;
+    width: min(100%, 1920px);
+    min-height: 100dvh;
+    margin-inline: auto;
+    padding-block: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* center → flex-start */
+    gap: var(--bt-pc-space-wrap-y);
+}
+
+
+/* 상하단 백그라운드 적용  */
+.bt-wrapper__bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    pointer-events: none;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bt-wrapper__bg--top {
+    top: 0;
+    height: 800px;
+
+    background-image: url("/bt_assets/images/top-bg.jpg");
+    background-position: center top;
+    background-size: max(100%, 1200px) auto;
+    background-repeat: no-repeat;
+
+    -webkit-mask-image: linear-gradient(to bottom,
+            #000 75%,
+            transparent 100%);
+    mask-image: linear-gradient(to bottom,
+            #000 75%,
+            transparent 100%);
+}
+
+.bt-wrapper__bg--bottom {
+    bottom: 0;
+    height: 800px;
+    background-image: url("/bt_assets/images/footer-bg.jpg");
+    background-position: center bottom;
+
+    /* 추가: 상단 경계 부드럽게 처리 */
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            #000 35%,
+            #000 100%);
+
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            #000 35%,
+            #000 100%);
+}
+
+
+/* 기존 콘텐츠를 배경보다 위에 배치 */
+.bt-wrapper>main,
+.bt-wrapper>footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header는 Main보다 위에 배치 */
+.bt-wrapper>header {
+    z-index: 10;
+}
+
+
+
+/* ============================================
+           서브페이지 공통 검색 적용  main
+===============================================*/
+.bt-sub-template-main {
+    width: min(calc(100% - 40px), 1440px);
+    margin-inline: auto;
+    min-height: auto;
+
+    /* 백그라운드 지정 */
+    background-color: rgba(255, 255, 255, .3);
+    /*backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px); */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--bt-space-32);
+    padding-block: var(--bt-space-36);
+}
+
+.bt-sub-template-main-title {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--bt-space-6);
+}
+
+.bt-sub-template-main-title>h3 {
+    font-size: var(--bt-font-size-28);
+    font-weight: var(--bt-font-weight-black);
+    line-height: var(--bt-line-height-tight);
+}
+
+.bt-sub-template-main-title>p {
+    font-size: var(--bt-font-size-14);
+    font-weight: var(--bt-font-weight-regular);
+    line-height: var(--bt-line-height-tight);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  미디어쿼리 분기  */
+@media (max-width:1186px) {}
+
+
+@media (max-width:790px) {
+
+    main {
+        height: auto;
+        gap: var(--bt-space-24);
+    }
+
+}
+
+
+@media (max-width:510px) {}
+
+@media (max-width:450px) {}
+
+
+
+
+
+
+
+/*  섹션 종료  */
+
+
+
+
+
+
+
+
+
+
+
+/*    */
