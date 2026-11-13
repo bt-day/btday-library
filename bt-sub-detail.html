@@ -78,18 +78,21 @@
                                 <p>LIVE PREVIEW</p>
                             </div>
                             <div class="right-icon-group">
-                                <button type="button">
+                                <button type="button" data-device="desktop" aria-label="PC 미리보기" aria-pressed="true">
                                     <img src="bt_assets/1depth/device-imac.svg" alt="" />
                                 </button>
-                                <button type="button">
+                                <button type="button" data-device="tablet" aria-label="태블릿 미리보기" aria-pressed="false">
                                     <img src="bt_assets/1depth/device-tablet-code.svg" alt="" />
                                 </button>
-                                <button type="button">
+                                <button type="button" data-device="mobile" aria-label="모바일 미리보기" aria-pressed="false">
                                     <img src="bt_assets/1depth/device-mobile-code.svg" alt="" />
                                 </button>
                             </div>
                         </div>
-                        <div class="live-preview-inner-iframe"></div>
+                        <div class="live-preview-inner-iframe">
+                            <iframe src="bt-index.html" title="BTDAY Navigation and Gallery Live Preview"
+                                loading="lazy"></iframe>
+                        </div>
                     </div>
                 </section>
 
@@ -154,6 +157,8 @@
         <script src="bt_js/bt-include.js"></script>
         <!-- 서브페이지 라이브러리 데이터 -->
         <script src="bt_js/bt-library.js"></script>
+        <!-- 아이프레임 right 버튼탭 제어용 -->
+        <script src="bt_js/bt-sub-detail.js"></script>
 
     </body>
 
