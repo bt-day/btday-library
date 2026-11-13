@@ -24,7 +24,7 @@ function renderList(items, totalCount = items.length) {
     // 목록 출력
     list.innerHTML = items.map((item) => `
         <li>
-            <a href="#none;">
+            <a href="${item.url || '#none'}">
                 <div class="subpage-list-icon"></div>
 
                 <div class="subpage-list-cont">
