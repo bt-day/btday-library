@@ -373,12 +373,14 @@
     line-height: var(--bt-line-height-tight);
 }
 
-.bt-code-edit-keyword-btn button:nth-child(1) {
+
+
+.bt-code-edit-keyword-btn button[aria-pressed="true"] {
     background-color: #1a1a1a;
     color: #fff;
 }
 
-.bt-code-edit-keyword-btn button:nth-child(1) img {
+.bt-code-edit-keyword-btn button[aria-pressed="true"] img {
     filter: brightness(0) invert(1);
 }
 
@@ -387,7 +389,7 @@
 /*  코드 에디터  */
 .bt-code-edit-board {
     width: min(100%, 1200px);
-    background-color: rgba(206, 225, 251, 0.4);
+    background-color: rgb(44, 45, 50);
     margin-inline: auto;
     height: 400px;
     border-radius: 24px;
@@ -402,7 +404,7 @@
 .bt-code-edit-board-title {
     width: min(100%, 1200px);
     margin-inline: auto;
-    background-color: #fff;
+    background-color: #1a1a1a;
     border-radius: 24px 24px 0 0;
     height: 80px;
     padding-inline: 24px;
@@ -414,6 +416,7 @@
 }
 
 .bt-code-edit-board-title>h3 {
+    color: #fff;
     font-size: clamp(var(--bt-font-size-16), calc(1.6vw + 0.7rem), var(--bt-font-size-18));
     font-weight: var(--bt-font-weight-bold);
     line-height: var(--bt-line-height-tight);
@@ -423,29 +426,147 @@
     font-size: clamp(var(--bt-font-size-14), calc(1.4vw + 0.7rem), var(--bt-font-size-16));
     font-weight: var(--bt-font-weight-bold);
     line-height: var(--bt-line-height-tight);
+    color: #fff;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: var(--bt-space-8);
-
 }
 
+
+.bt-code-edit-board-title-right button[aria-pressed="true"] {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.bt-code-edit-board-title-right button[aria-pressed="true"] img {
+    filter: brightness(0) invert(1);
+}
+
+
+
 .bt-code-edit-board-result {
-    width: min(calc(100% - 60px), 1200px);
+    width: min(calc(100% - 20px), 1200px);
     margin-inline: auto;
-    border: 1px solid #fca044;
-    border-radius: 24px;
     height: 400px;
+
+    min-height: 0;
+    overflow: auto;
 
     display: flex;
     flex-direction: column;
     gap: var(--bt-space-16);
 }
 
+.bt-code-edit-board-result pre {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    tab-size: 4;
+}
+
+.bt-code-edit-board-result code {
+    font-family: inherit;
+    white-space: pre;
+    color: #fff;
+}
 
 
+
+/* Source Code Download */
+.bt-code-download {
+    width: min(calc(100% - 40px), 1200px);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.bt-code-download a {
+    flex: 0 1 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    min-height: 52px;
+    padding: 12px;
+    border-radius: 24px;
+
+    background-color: #fff;
+    color: #222;
+    font-size: clamp(12px, calc(13vw + 0.6rem), 14px);
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.5s ease-in-out,
+        color 0.5s ease-in-out,
+        box-shadow 0.5s ease-in-out;
+}
+
+.bt-code-download a:hover {
+    transform: translateY(-4px);
+    background-color: #202024;
+    color: #fff;
+    box-shadow: 0 12px 25px rgba(35, 45, 85, 0.2);
+}
+
+.bt-code-download a:active {
+    transform: translateY(-1px);
+}
+
+
+.bt-code-download a:hover,
+.bt-code-download a:focus-visible {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+
+.bt-code-download a img {
+    width: 18px;
+    height: 18px;
+    transition: filter 0.5s ease-in-out;
+}
+
+.bt-code-download a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+
+@media (max-width: 640px) {
+    .bt-code-download {
+        flex-wrap: wrap;
+    }
+
+    .bt-code-download a {
+        flex: 1 1 calc((100% - 12px) / 2);
+        min-width: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .bt-code-download {
+        flex-wrap: wrap;
+    }
+
+    .bt-code-download a {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+}
 
 
 

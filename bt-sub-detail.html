@@ -23,7 +23,6 @@
         <!-- 페이지 전용 CSS : 서브 공통페이지 -->
         <link rel="stylesheet" href="bt_css/bt_pages/bt-sub-detail.css">
 
-
     </head>
 
     <body>
@@ -98,28 +97,28 @@
 
                 <section class="bt-code-edit">
                     <div class="bt-code-edit-keyword-btn">
-                        <button type="button">
+                        <button type="button" data-code="html" aria-pressed="true">
                             <img src="bt_assets/1depth/brand-html5.svg" alt="" />
                             <div class="bt-code-edit-keyword-btn-title">
                                 <h3>HTML</h3>
                                 <p>Markup example</p>
                             </div>
                         </button>
-                        <button type="button">
+                        <button type="button" data-code="css" aria-pressed="false">
                             <img src="bt_assets/1depth/brand-css3.svg" alt="" />
                             <div class="bt-code-edit-keyword-btn-title">
                                 <h3>CSS</h3>
                                 <p>Styling and theming</p>
                             </div>
                         </button>
-                        <button type="button">
+                        <button type="button" data-code="js" aria-pressed="false">
                             <img src="bt_assets/1depth/file-type-js.svg" alt="" />
                             <div class="bt-code-edit-keyword-btn-title">
                                 <h3>JS</h3>
                                 <p>Optional behaviors</p>
                             </div>
                         </button>
-                        <button type="button">
+                        <button type="button" data-code="overview" aria-pressed="false">
                             <img src="bt_assets/1depth/zoom-pan.svg" alt="" />
                             <div class="bt-code-edit-keyword-btn-title">
                                 <h3>Overview</h3>
@@ -132,16 +131,38 @@
                             <h3>MARKUP(HTML)</h3>
                             <div class="bt-code-edit-board-title-right">
                                 <p>HTML</p>
-                                <button type="button"><img src="bt_assets/1depth/copy.svg" alt="" /></button>
+                                <button type="button" aria-pressed="true"><img src="bt_assets/1depth/copy.svg"
+                                        alt="" /></button>
                             </div>
                         </div>
-                        <div class="bt-code-edit-board-result"></div>
+                        <div class="bt-code-edit-board-result">
+                            <pre><code id="bt-source-code"></code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Source Code Download -->
+                    <div class="bt-code-download">
+                        <a href="bt_sources/navigation-basic/basic-navi.html" download>
+                            <img src="bt_assets/1depth/download.svg" alt="" />
+                            <p>HTML</p>
+                        </a>
+
+                        <a href="bt_sources/navigation-basic/basic-navi.css" download>
+                            <img src="bt_assets/1depth/download.svg" alt="" />
+                            <p>CSS</p>
+                        </a>
+
+                        <a href="bt_sources/navigation-basic/basic-navi.js" download>
+                            <img src="bt_assets/1depth/download.svg" alt="" />
+                            <p>JS</p>
+                        </a>
+
+                        <a href="bt_sources/navigation-basic/assets.zip" download>
+                            <img src="bt_assets/1depth/download.svg" alt="" />
+                            <p>Assets</p>
+                        </a>
                     </div>
                 </section>
-
-
-
-
 
             </main>
 
@@ -149,7 +170,6 @@
             <div id="bt-footer-include"></div>
 
         </div>
-
 
 
         <script src="bt_js/bt-header.js"></script>
