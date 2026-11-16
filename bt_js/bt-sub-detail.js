@@ -67,10 +67,10 @@ const sourceCode = document.querySelector("#bt-source-code");
 
 // STEP 03 — 실제 소스 파일 경로
 const sourceFiles = {
-    html: "bt_sources/navigation-basic/basic-navi.html",
-    css: "bt_sources/navigation-basic/css/basic-navi.css",
-    js: "bt_sources/navigation-basic/js/basic-navi.js",
-    overview: "bt_sources/navigation-basic/overview/overview.txt"
+    html: sourceCode?.dataset.html,
+    css: sourceCode?.dataset.css,
+    js: sourceCode?.dataset.js,
+    overview: sourceCode?.dataset.overview
 };
 
 

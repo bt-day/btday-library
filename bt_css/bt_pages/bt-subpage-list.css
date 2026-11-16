@@ -400,7 +400,18 @@
     aspect-ratio: 1 / 1;
     background-color: #e8e8ff;
     border-radius: 14px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+.subpage-list-icon img {
+    width: 42px;
+    height: 42px;
+}
+
 
 .subpage-list-cont {
     flex: 1 1 80%;

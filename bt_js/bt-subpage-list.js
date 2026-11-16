@@ -25,7 +25,9 @@ function renderList(items, totalCount = items.length) {
     list.innerHTML = items.map((item) => `
         <li>
             <a href="${item.url || '#none'}">
-                <div class="subpage-list-icon"></div>
+                <div class="subpage-list-icon">
+                    <img src="bt_assets/1depth/device-desktop.svg" alt="" />
+                </div>
 
                 <div class="subpage-list-cont">
                     <h3>${item.title}</h3>
@@ -96,6 +98,25 @@ async function loadSubpageList() {
             ...new Set(filteredEntries.map((item) => item.variant))
         ];
 
+
+
+        // variant를 서브키워드명과 필터 식별값으로 함께 사용
+        keywordList.innerHTML = `
+    <li>
+        <button type="button" data-variant="all">All</button>
+    </li>
+    ${variants.map((variant) => {
+            return `
+            <li>
+                <button type="button" data-variant="${variant}">
+                    ${variant}
+                </button>
+            </li>
+        `;
+        }).join("")}
+`;
+
+        /*
         keywordList.innerHTML = `
             <li>
                 <button type="button" data-variant="all">All</button>
@@ -115,7 +136,7 @@ async function loadSubpageList() {
                     </li>
                 `;
         }).join("")}
-        `;
+        `; */
 
 
 
@@ -145,7 +166,7 @@ async function loadSubpageList() {
 
         // Pagination 상태
         let currentPage = 1;
-        const itemsPerPage = 2; // QA용, 완료 후 변경
+        const itemsPerPage = 5; // QA용, 완료 후 변경
 
 
         // 현재 정렬 기준에 따라 목록 정렬

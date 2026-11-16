@@ -1,0 +1,52 @@
+
+Split Visual Login
+
+A responsive split-layout login interface 
+combining account sign-in controls 
+with a branded visual panel.
+
+Features
+- Email and password input fields
+- Password visibility toggle UI
+- Remember me checkbox
+- Forgot password and sign-up links
+- Social login button UI
+- Branded image panel with promotional content
+- Responsive layout for desktop and mobile
+
+Layout
+- Left: Login form and account actions
+- Right: Brand visual and promotional message
+- Responsive adaptation for smaller screens
+
+Technologies
+- HTML5
+- CSS3
+- JavaScript (for interactive behavior)
+
+Notes
+- Designed as a reusable login UI component.
+- Authentication and social login require 
+backend integration.
+- Password visibility and form interaction 
+should be verified before production use.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

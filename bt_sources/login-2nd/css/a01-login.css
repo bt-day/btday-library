@@ -1,0 +1,170 @@
+/*  로그인 폼 01번 시작   */
+
+.login-wrap {
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(ellipse 900px 500px at -5% 10%,
+            rgba(115, 165, 255, .55) 0%,
+            transparent 70%),
+
+        radial-gradient(ellipse 750px 450px at 105% 5%,
+            rgba(255, 180, 215, .45) 0%,
+            transparent 72%),
+
+        radial-gradient(ellipse 850px 450px at 15% 110%,
+            rgba(180, 165, 255, .40) 0%,
+            transparent 72%),
+
+        radial-gradient(ellipse 950px 500px at 100% 105%,
+            rgba(255, 195, 125, .50) 0%,
+            transparent 72%),
+
+        linear-gradient(135deg,
+            #f1f6ff 0%,
+            #f8f5ff 48%,
+            #fff6ec 100%);
+}
+
+.login-group {
+    width: min(100%, 580px);
+    margin-inline: auto;
+    border-radius: 24px;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    padding-block: var(--mjm-space-44);
+}
+
+.login-group-inner {
+    width: min(100%, 480px);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--mjm-space-32);
+}
+
+/* 타이틀영역 작업 */
+.login-group-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mjm-space-12);
+}
+
+.eyebrow-icon {
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+    border-radius: 14px;
+}
+
+.login-group-title h1 {
+    font-size: clamp(var(--mjm-space-32), calc(5vw + 1rem), var(--mjm-font-size-48));
+    font-weight: var(--mjm-font-weight-black);
+    line-height: 1;
+}
+
+.login-group-title p {
+    font-size: var(--mjm-font-size-16);
+    font-size: clamp(var(--mjm-font-size-12), calc(1.4vw + 1rem), var(--mjm-font-size-16));
+    font-weight: var(--mjm-font-weight-light);
+    line-height: 1.2;
+}
+
+
+
+/*  form 영역 세팅  */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mjm-space-32);
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mjm-space-12);
+}
+
+.login-field label {
+    font-size: var(--mjm-font-size-18);
+    font-weight: var(--mjm-font-weight-bold);
+    line-height: var(--mjm-line-height-tight);
+}
+
+.login-field input {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-inline: 1.2rem;
+    border: 1px solid #dddddd;
+
+    font-size: var(--mjm-font-size-16);
+    font-weight: var(--mjm-font-weight-regular);
+    line-height: var(--mjm-line-height-tight);
+}
+
+
+.login-field-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-sign-in {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: blue;
+
+    color: #fff;
+    font-size: var(--mjm-font-size-16);
+    font-weight: var(--mjm-font-weight-regular);
+    cursor: pointer;
+
+}
+
+.login-sign-up {
+    font-size: var(--mjm-font-size-16);
+    font-weight: var(--mjm-font-weight-regular);
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.login-sign-up-link {
+    font-size: var(--mjm-font-size-16);
+    font-weight: var(--mjm-font-weight-black);
+    color: blue;
+    padding-left: 10px;
+}
+
+
+
+/* 미디어쿼리 분기 */
+
+@media (max-width:580px) {
+    .login-group {
+        width: 92%;
+    }
+
+    .login-group-inner {
+        width: 82%;
+    }
+}
+
+@media (max-width:320px) {
+    .login-field-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/*   구분라인   */

@@ -1,0 +1,32 @@
+
+Extended Login Form
+
+A responsive login form featuring account sign-in fields, 
+password visibility controls, and social login options in a centered card layout.
+
+Features
+- Email and password input fields
+- Password visibility toggle UI
+- Remember me checkbox
+- Forgot password and sign-up links
+- Primary sign-in button
+- Social login button UI for Naver, Kakao, and Google
+- Centered card layout with a soft gradient background
+- Responsive layout for desktop and mobile
+
+Layout
+- Centered single-column login card
+- Clearly labeled email and password fields
+- Primary account actions grouped together
+- Social login options arranged in a flexible grid
+- Responsive spacing and alignment
+
+Technologies
+- HTML5
+- CSS3
+- JavaScript (for interactive behavior)
+
+Notes
+- Designed as a reusable extended login UI component.
+- Authentication and social login require backend integration.
+- Password visibility and form interactions should be verified before production use.
