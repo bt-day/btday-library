@@ -22,6 +22,7 @@ function initHeader() {
     updateHeaderState();
 }
 
+initHeader();
 
 
 /*   */

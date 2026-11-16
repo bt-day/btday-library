@@ -5,14 +5,15 @@ header {
     position: sticky;
     top: 0;
 
-    width: min(calc(100% - 40px), 1440px);
+    width: min(calc(100% - 40px), 900px);
     margin-inline: auto;
-    height: 120px;
+    height: 90px;
     box-sizing: border-box;
     padding-inline: 40px;
+    margin-top: 60px;
 
     /* 백그라운드 지정 */
-    background-color: rgba(255, 255, 255, .3);
+    background-color: #f2f2f2;
 
     transition:
         background-color 0.3s ease,
@@ -189,7 +190,7 @@ header nav ul>li:focus-within>.sub-2depth {
 }
 
 /* 모바일 네비 세팅 */
-@media (max-width:1186px) {
+@media (max-width:768px) {
     .bt-pc-navi {
         display: none;
     }
@@ -389,75 +390,6 @@ header nav ul>li:focus-within>.sub-2depth {
 
 
 
-footer {
-    width: min(calc(100% - 40px), 1440px);
-    margin-inline: auto;
-    box-sizing: border-box;
-    padding-block: var(--bt-space-32);
-    /* 백그라운드 지정 */
-    background-color: rgba(255, 255, 255, .5);
-    /*backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px); */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 24px;
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--bt-space-36);
-}
-
-.inner-footer-group {
-    box-sizing: border-box;
-    padding-inline: 40px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.ft-logo {
-    flex: 1 1 30%;
-}
-
-.ft-logo h3 {
-    font-size: clamp(var(--bt-font-size-16), 2vw, var(--bt-font-size-20));
-    font-weight: var(--bt-font-weight-black);
-}
-
-.ft-logo p {
-    font-size: clamp(var(--bt-font-size-14), 2vw, var(--bt-font-size-16));
-    font-weight: var(--bt-font-weight-regular);
-    line-height: var(--bt-line-height-tight);
-}
-
-.right-text {
-    flex: 1 1 65%;
-    text-align: right;
-}
-
-.right-text h3 {
-    font-size: clamp(var(--bt-font-size-16), 2vw, var(--bt-font-size-20));
-    font-weight: var(--bt-font-weight-black);
-    line-height: var(--bt-line-height-tight);
-}
-
-.right-text p {
-    font-size: clamp(var(--bt-font-size-14), 2vw, var(--bt-font-size-16));
-    font-weight: var(--bt-font-weight-regular);
-    line-height: var(--bt-line-height-tight);
-}
-
-.ft-copyright {
-    display: flex;
-    justify-content: center;
-
-    font-size: clamp(var(--bt-font-size-12), 2vw, var(--bt-font-size-14));
-    font-weight: var(--bt-font-weight-regular);
-    line-height: var(--bt-line-height-tight);
-}
-
-
 
 /* ==================================
              미디어쿼리 적용
@@ -491,22 +423,7 @@ footer {
     }
 }
 
-/* 푸터 미디어쿼리  */
-@media (max-width:640px) {
-    .inner-footer-group {
-        flex-direction: column;
-        gap: var(--bt-space-20);
-    }
 
-    .ft-logo {
-        width: 100%;
-    }
-
-    .right-text {
-        width: 100%;
-        text-align: start;
-    }
-}
 
 
 

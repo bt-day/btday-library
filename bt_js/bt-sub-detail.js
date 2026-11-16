@@ -12,10 +12,11 @@ const previewFrame = document.querySelector(
 
 // 2. 디바이스별 iframe 너비
 const deviceWidths = {
-    desktop: "1200px",
-    tablet: "768px",
+    desktop: "min(100%, 900px)",
+    tablet: "min(100%, 768px)",
     mobile: "min(100%, 320px)"
 };
+
 
 // 3. 버튼 클릭 시 실행
 if (previewFrame && deviceButtons.length) {
@@ -63,51 +64,14 @@ const codeTitles = {
 
 const sourceCode = document.querySelector("#bt-source-code");
 
+
 // STEP 03 — 실제 소스 파일 경로
 const sourceFiles = {
     html: "bt_sources/navigation-basic/basic-navi.html",
-    css: "bt_sources/navigation-basic/basic-navi.css",
-    js: "bt_sources/navigation-basic/basic-navi.js"
+    css: "bt_sources/navigation-basic/css/basic-navi.css",
+    js: "bt_sources/navigation-basic/js/basic-navi.js",
+    overview: "bt_sources/navigation-basic/overview/overview.txt"
 };
-
-
-// STEP 02 — 탭별 샘플 콘텐츠
-const codeSamples = {
-    html: `<nav class="bt-navigation">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Components</a></li>
-        <li><a href="#">Portfolio</a></li>
-    </ul>
-</nav>`,
-
-    css: `.bt-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.bt-navigation ul {
-    display: flex;
-    gap: 24px;
-}`,
-
-    js: `const nav = document.querySelector(".bt-navigation");
-
-nav.addEventListener("click", (event) => {
-    console.log("Navigation clicked");
-});`,
-
-    overview: `Basic Dropdown Navigation
-
-A responsive navigation component.
-
-Features:
-- Desktop dropdown menu
-- Mobile accordion navigation
-- Keyboard focus support`
-};
-
 
 
 // 실제 Source Code 파일 요청
@@ -174,8 +138,6 @@ if (codeButtons.length && codeTitle && sourceCode) {
 
             if (sourceFiles[selectedCode]) {
                 loadSource(selectedCode);
-            } else {
-                sourceCode.textContent = codeSamples[selectedCode];
             }
 
         });

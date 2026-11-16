@@ -1,0 +1,8 @@
+Basic Dropdown Navigation
+
+A responsive navigation component.
+
+Features:
+- Desktop dropdown menu
+- Mobile accordion navigation
+- Keyboard focus support
