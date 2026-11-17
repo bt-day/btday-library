@@ -26,7 +26,7 @@ function renderList(items, totalCount = items.length) {
         <li>
             <a href="${item.url || '#none'}">
                 <div class="subpage-list-icon">
-                    <img src="bt_assets/1depth/device-desktop.svg" alt="" />
+                    <img src="${item.thumbnail || 'bt_assets/1depth/device-desktop.svg'}" alt="" />
                 </div>
 
                 <div class="subpage-list-cont">

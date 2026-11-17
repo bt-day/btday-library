@@ -377,7 +377,7 @@
             "variant": "basic-dropdown",
             "title": "Basic Dropdown Navigation",
             "description": "A responsive dropdown navigation component supporting hover, keyboard focus, and mobile accordion interactions.",
-            "thumbnail": "",
+            "thumbnail": "bt_assets/1depth/projects.svg",
             "version": "1.0",
             "status": "ready",
             "url": "com-basic-navi.html"
@@ -389,7 +389,7 @@
             "variant": "mega-menu",
             "title": "Mega Menu Navigation",
             "description": "A flexible multi-column navigation system supporting multiple menu levels and responsive layouts.",
-            "thumbnail": "",
+            "thumbnail": "bt_assets/1depth/zoom-pan.svg",
             "version": "",
             "status": "planned",
             "url": ""
@@ -449,7 +449,7 @@
             "variant": "login-group",
             "title": "Visual Login",
             "description": "A responsive split-layout login form combining account sign-in controls with a branded visual panel.",
-            "thumbnail": "",
+            "thumbnail": "bt_assets/1depth/patterns.svg",
             "version": "",
             "status": "planned",
             "url": "com-login-form-3nd.html"
@@ -461,7 +461,7 @@
             "variant": "login-group",
             "title": "Extended Login Form",
             "description": "A responsive login form featuring account sign-in fields, password visibility controls, and social login options in a centered card layout.",
-            "thumbnail": "",
+            "thumbnail": "bt_assets/1depth/patterns.svg",
             "version": "",
             "status": "planned",
             "url": "com-login-form-2nd.html"
