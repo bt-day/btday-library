@@ -65,9 +65,17 @@ function renderLibrary(items, emptyType = "category", currentPage = 1, itemsPerP
                 ` : ""}
 
                 <div class="subpd-box">
-                    <div class="subpd-box-innerbx"></div>
-                    <div class="subpd-boxinnertx"></div>
-                    <div class="subpd-boxinnertx"></div>
+                    <div class="subpd-box-innerbx">
+                        <div class="subpd-box-innerbx-no">N</div>
+                        <div class="subpd-box-innerbx-title">
+                            <h3>네비게이션 모음</h3>
+                            <p>1depth, 2depth...</p>
+                        </div>
+                    </div>
+                    <div class="subpd-boxinnertx">
+                        <h3>2026</h3>
+                        <p>웹개발 구성</p>
+                    </div>
                 </div>
                 <h3>${item.title}</h3>
             </li>
