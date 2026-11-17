@@ -121,7 +121,11 @@
             "category": "components",
             "subcategory": "navigation",
             "title": "Navigation",
-            "description": "",
+            "description": "1depth, 2depth...",
+            "symbol": "N",
+            "cardHeading": "네비게이션 모음",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=components&subcategory=navigation"
         },
         {
@@ -129,7 +133,11 @@
             "category": "components",
             "subcategory": "button",
             "title": "Button",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "B",
+            "cardHeading": "버튼 모음",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=components&subcategory=button"
         },
         {
@@ -137,7 +145,11 @@
             "category": "components",
             "subcategory": "form-input",
             "title": "Form & Input",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "F",
+            "cardHeading": "폼 & 인풋",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=components&subcategory=form-input"
         },
         {
@@ -145,7 +157,11 @@
             "category": "components",
             "subcategory": "modal-popup",
             "title": "Modal & Popup",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "M",
+            "cardHeading": "모달 & 팝업",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=components&subcategory=modal-popup"
         },
         {
@@ -153,7 +169,11 @@
             "category": "components",
             "subcategory": "table-board",
             "title": "Table & Board",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "T",
+            "cardHeading": "테이블 & 보드",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=components&subcategory=table-board"
         },
         {
@@ -161,7 +181,11 @@
             "category": "components",
             "subcategory": "card",
             "title": "Card",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "C",
+            "cardHeading": "카드",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=components&subcategory=card"
         },
         {
@@ -169,7 +193,11 @@
             "category": "patterns",
             "subcategory": "header-footer",
             "title": "Header & Footer",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "H",
+            "cardHeading": "헤더 & 푸터",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=patterns&subcategory=header-footer"
         },
         {
@@ -177,7 +205,11 @@
             "category": "patterns",
             "subcategory": "search-filter",
             "title": "Search & Filter",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "S",
+            "cardHeading": "서치 & 필터",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=patterns&subcategory=search-filter"
         },
         {
@@ -185,7 +217,11 @@
             "category": "patterns",
             "subcategory": "gallery-slider",
             "title": "Gallery & Slider",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "G",
+            "cardHeading": "갤러리 & 슬라이더",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=patterns&subcategory=gallery-slider"
         },
         {
@@ -193,7 +229,11 @@
             "category": "patterns",
             "subcategory": "pagination",
             "title": "Pagination",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "P",
+            "cardHeading": "페이지네이션",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=patterns&subcategory=pagination"
         },
         {
@@ -201,7 +241,11 @@
             "category": "patterns",
             "subcategory": "responsive-ui",
             "title": "Responsive UI",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "R",
+            "cardHeading": "반응형 UI",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=patterns&subcategory=responsive-ui"
         },
         {
@@ -209,7 +253,11 @@
             "category": "aicreation",
             "subcategory": "shorts-video",
             "title": "Shorts-video",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "S",
+            "cardHeading": "쇼츠-비디오",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=aicreation&subcategory=shorts-video"
         },
         {
@@ -217,7 +265,11 @@
             "category": "aicreation",
             "subcategory": "product-composite",
             "title": "Product-composite",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "P",
+            "cardHeading": "제품+모델합성",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=aicreation&subcategory=product-composite"
         },
         {
@@ -225,7 +277,11 @@
             "category": "aicreation",
             "subcategory": "product-detail-page",
             "title": "Product-detail-page",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "D",
+            "cardHeading": "상세페이지",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=aicreation&subcategory=product-detail-page"
         },
         {
@@ -233,7 +289,11 @@
             "category": "projects",
             "subcategory": "diva-page",
             "title": "Diva Page",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "D",
+            "cardHeading": "상세페이지",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=projects&subcategory=diva-page"
         },
         {
@@ -241,7 +301,11 @@
             "category": "projects",
             "subcategory": "mjm-modern-web",
             "title": "MJM Modern Web",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "M",
+            "cardHeading": "명지 모던웹",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=projects&subcategory=mjm-modern-web"
         },
         {
@@ -249,7 +313,11 @@
             "category": "projects",
             "subcategory": "btday-showcase",
             "title": "BTDAY Showcase",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "B",
+            "cardHeading": "뷰티데이 쇼케이스",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=projects&subcategory=btday-showcase"
         },
         {
@@ -257,7 +325,11 @@
             "category": "portfolio",
             "subcategory": "banner",
             "title": "Banner",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "B",
+            "cardHeading": "배너 디자인",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=portfolio&subcategory=banner"
         },
         {
@@ -265,7 +337,11 @@
             "category": "portfolio",
             "subcategory": "detail",
             "title": "Detail",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "D",
+            "cardHeading": "상세페이지 디자인",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=portfolio&subcategory=detail"
         },
         {
@@ -273,7 +349,11 @@
             "category": "portfolio",
             "subcategory": "website",
             "title": "Website",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "W",
+            "cardHeading": "웹사이트 구축",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=portfolio&subcategory=website"
         },
         {
@@ -281,7 +361,11 @@
             "category": "portfolio",
             "subcategory": "photo",
             "title": "Photo",
-            "description": "",
+            "description": "기본형, 확장형",
+            "symbol": "P",
+            "cardHeading": "스냅촬영-제품촬영",
+            "year": "2026",
+            "field": "웹개발 구성",
             "url": "bt-subpage-list.html?category=portfolio&subcategory=photo"
         }
     ],

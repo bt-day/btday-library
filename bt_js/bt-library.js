@@ -66,17 +66,22 @@ function renderLibrary(items, emptyType = "category", currentPage = 1, itemsPerP
 
                 <div class="subpd-box">
                     <div class="subpd-box-innerbx">
-                        <div class="subpd-box-innerbx-no">N</div>
+                        <div class="subpd-box-innerbx-no">
+                            ${item.symbol ?? "N"}
+                        </div>
+
                         <div class="subpd-box-innerbx-title">
-                            <h3>네비게이션 모음</h3>
-                            <p>1depth, 2depth...</p>
+                            <h3>${item.cardHeading ?? "네비게이션 모음"}</h3>
+                            <p>${item.description ?? "1depth, 2depth..."}</p>
                         </div>
                     </div>
+
                     <div class="subpd-boxinnertx">
-                        <h3>2026</h3>
-                        <p>웹개발 구성</p>
+                        <h3>${item.year ?? "2026"}</h3>
+                        <p>${item.field ?? "웹개발 구성"}</p>
                     </div>
                 </div>
+
                 <h3>${item.title}</h3>
             </li>
         `).join("");
@@ -297,8 +302,15 @@ async function loadLibrary() {
         function searchLibrary() {
             const keyword = searchInput.value.trim().toLowerCase();
 
+            // 1Depth 카드의 영문 제목 + 한글 제목 + 설명 통합 검색
             const searchedItems = data.items.filter((item) => {
-                return item.title.toLowerCase().includes(keyword);
+                const searchText = [
+                    item.title,
+                    item.cardHeading,
+                    item.description
+                ].filter(Boolean).join(" ").toLowerCase();
+
+                return searchText.includes(keyword);
             });
 
             // 현재 검색 결과 상태 갱신
