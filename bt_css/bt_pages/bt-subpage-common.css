@@ -483,7 +483,6 @@
     width: clamp(3.6rem, calc(8vw + 1rem), 5rem);
     aspect-ratio: 1 / 1;
 
-
     background-color: rgba(134, 213, 252, 0.2);
     border-radius: 50px;
 
@@ -542,6 +541,15 @@
     font-weight: var(--bt-font-weight-bold);
     line-height: var(--bt-line-height-tight);
 }
+
+
+/* 소스 등록 완료일 때만 색상 변경 */
+.subpd-box-innerbx-no.is-ready {
+    background-color: #1745d8;
+    color: #fff;
+}
+
+
 
 
 

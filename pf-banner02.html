@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+        <title>btday 포트폴리오 :: 베너 페이지</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-pf-banner.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-detail-main">
+                <section class="sub-detail-main-title">
+                    <div class="sub-detail-main-title-inner">
+                        <p class="bt-breadcrumb">Portfolio > Banner Design > <span
+                                class="bt-breadcrumb-sp">Medical</span></p>
+                        <h2>Campaign Banner Collection</h2>
+                        <p class="bt-description">
+                            성형외과 및 메디컬 프로모션을 가정하여 제작한 이벤트 배너입니다. 모델 중심의 레이아웃과
+                            가격·프로모션 정보를 강조하는 실무형 광고 디자인을 구성했습니다
+                        </p>
+                    </div>
+                </section>
+                <section class="sub-detail-main-banner">
+                    <div class="banner-year-titile">
+                        <p>2025</p>
+                        <p>web & edtorial design</p>
+                    </div>
+                    <div class="banner-main-title">
+                        <div class="banner-no">02</div>
+                        <div class="banner-main-title-conts">
+                            <h3>Plastic Surgery</h3>
+                            <p>Medical Promotion · Trust Visual · Clinic Marketing</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><img src="bt_assets/images/banner/mo01.jpg" alt="" /></li>
+                        <li><img src="bt_assets/images/banner/mo02.png" alt="" /></li>
+                        <li><img src="bt_assets/images/banner/mo03.png" alt="" /></li>
+                        <li><img src="bt_assets/images/banner/mo04.png" alt="" /></li>
+                    </ul>
+                    <div class="banner-ft-conts">
+                        <div class="banner-ft-unline"></div>
+                        <h3>성형외과 & 뷰티클리닉시술 프로모션 배너광고 컨셉디자인</h3>
+                        <p>병원 브랜드 및 시술별 프로모션 모델 비주얼과 이벤트 카피 중심의 광고</p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+
+    </body>
+
+</html>

@@ -66,7 +66,7 @@ function renderLibrary(items, emptyType = "category", currentPage = 1, itemsPerP
 
                 <div class="subpd-box">
                     <div class="subpd-box-innerbx">
-                        <div class="subpd-box-innerbx-no">
+                        <div class="subpd-box-innerbx-no ${item.sourceStatus === "ready" ? "is-ready" : ""}">
                             ${item.symbol ?? "N"}
                         </div>
 

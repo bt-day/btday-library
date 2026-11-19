@@ -25,7 +25,9 @@ function renderList(items, totalCount = items.length) {
     list.innerHTML = items.map((item) => `
         <li>
             <a href="${item.url || '#none'}">
-                <div class="subpage-list-icon">
+                <div class="subpage-list-icon
+                ${item.sourceStatus === "ready" ? "is-ready" : ""}
+                ${item.category === "portfolio" && item.thumbnail ? "is-thumbnail" : ""} ">
                     <img src="${item.thumbnail || 'bt_assets/1depth/device-desktop.svg'}" alt="" />
                 </div>
 
@@ -37,7 +39,8 @@ function renderList(items, totalCount = items.length) {
                 <div class="subpage-list-meta">
                     <p>
                         ${item.version ? `v${item.version} · ` : ""}
-                        ${item.status === "ready" ? "Ready" : "Planned"}
+
+                        ${item.status ?? ""}
                     </p>
                     <span>View Details</span>
                 </div>
@@ -166,7 +169,7 @@ async function loadSubpageList() {
 
         // Pagination 상태
         let currentPage = 1;
-        const itemsPerPage = 5; // QA용, 완료 후 변경
+        const itemsPerPage = 7; // QA용, 완료 후 변경
 
 
         // 현재 정렬 기준에 따라 목록 정렬

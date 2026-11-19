@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+        <title>btday 포트폴리오 :: 베너 페이지</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-pf-banner.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-detail-main">
+                <section class="sub-detail-main-title">
+                    <div class="sub-detail-main-title-inner">
+                        <p class="bt-breadcrumb">Portfolio > Banner Design > <span class="bt-breadcrumb-sp">High-end
+                                Audio</span></p>
+                        <h2>Campaign Banner Collection</h2>
+                        <p class="bt-description">
+                            프리미엄 오디오 브랜드를 대상으로 브랜드 아이덴티티와 제품 이미지를 중심으로 구성한
+                            프로모션 배너입니다. 여백, 타이포그래피, 제품 강조를 통해 하이엔드 브랜드의 분위기를 표현
+                            했습니다.
+                        </p>
+                    </div>
+                </section>
+                <section class="sub-detail-main-banner">
+                    <div class="banner-year-titile">
+                        <p>2024</p>
+                        <p>web & edtorial design</p>
+                    </div>
+                    <div class="banner-main-title">
+                        <div class="banner-no">04</div>
+                        <div class="banner-main-title-conts">
+                            <h3>High-end Audio Campaign</h3>
+                            <p>High-end Audio · Brand Visual · Product Promotion</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><img src="bt_assets/images/banner/focal_btn01.png" alt="" /></li>
+                        <li><img src="bt_assets/images/banner/focal_btn02.png" alt="" /></li>
+                        <li><img src="bt_assets/images/banner/focal_btn03.png" alt="" /></li>
+                        <li><img src="bt_assets/images/banner/ms.png" alt="" /></li>
+                    </ul>
+                    <div class="banner-ft-conts">
+                        <div class="banner-ft-unline"></div>
+                        <h3>프리미엄 오디오 & 스피커브랜드 프로모션 배너제품 비주얼 디자인</h3>
+                        <p>포칼 스피커 제품별 브랜드 광고 제품 특성과 디자인을 강조한 배너</p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+
+    </body>
+
+</html>
