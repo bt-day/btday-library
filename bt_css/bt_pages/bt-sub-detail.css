@@ -34,7 +34,7 @@
     top: 0;
     height: 800px;
 
-    background-image: url("/bt_assets/images/top-bg.jpg");
+    background-image: url("https://bt-day.github.io/btday-library/bt_assets/images/top-bg.jpg");
     background-position: center top;
     background-size: max(100%, 1200px) auto;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@
 .bt-wrapper__bg--bottom {
     bottom: 0;
     height: 800px;
-    background-image: url("/bt_assets/images/footer-bg.jpg");
+    background-image: url("https://bt-day.github.io/btday-library/bt_assets/images/footer-bg.jpg");
     background-position: center bottom;
 
     /* 추가: 상단 경계 부드럽게 처리 */
