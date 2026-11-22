@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+        <title>btday 포트폴리오 :: website</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-pf-website.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-detail-main">
+                <section class="sub-detail-main-title">
+                    <div class="sub-detail-main-title-inner">
+                        <p class="bt-breadcrumb">Portfolio > Website > <span class="bt-breadcrumb-sp">Queen's
+                                Collagen</span></p>
+                        <h2>Queen's Collagen — Beauty Brand Website</h2>
+                        <p class="bt-description">
+                            퀸스콜라겐의 브랜드 이미지와 스킨케어·헤어케어 제품을 중심으로 구성한 화장품 브랜드 웹사이트입니다. 메인 비주얼과 제품별 갤러리, 콜라겐 관련 정보 콘텐츠를
+                            구분하고, 브랜드 컬러와 이미지 중심의 레이아웃을 활용해 제품 라인업과 브랜드 특성을 일관된 디자인으로 표현했습니다.
+                        </p>
+                    </div>
+                </section>
+                <section class="sub-detail-main-banner">
+                    <div class="banner-year-titile">
+                        <p>2023</p>
+                        <p>Web Design / Publishing</p>
+                    </div>
+                    <div class="banner-main-title">
+                        <div class="banner-no-de03 banner-no">01</div>
+                        <div class="banner-main-title-conts">
+                            <h3>Queen's Collagen</h3>
+                            <p>Beauty Brand · Product Gallery · Web Design</p>
+                        </div>
+                        <ul class="website-main-title">
+                            <li>
+                                <h3>CATEGORY</h3>
+                                <p>Web Design / Publishing</p>
+                            </li>
+                            <li>
+                                <h3>TYPE</h3>
+                                <p>Beauty Brand Website</p>
+                            </li>
+                            <li>
+                                <h3>DESIGN</h3>
+                                <p>Brand Visual / UI Layout</p>
+                            </li>
+                            <li>
+                                <h3>DEVELOPMENT</h3>
+                                <p>Product Gallery / Brand Information</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <picture class="bt-banner-picture">
+                        <!-- 모바일 이미지 -->
+                        <source media="(max-width: 767px)" srcset="bt_assets/images/website/qs-mo.jpg">
+                        <!-- PC 이미지 (기본값) -->
+                        <img src="bt_assets/images/website/qs-pc.jpg" alt="브랜드 프로모션 배너">
+                    </picture>
+                    <div class="banner-ft-conts">
+                        <div class="banner-ft-unline"></div>
+                        <h3>화장품 브랜드 웹사이트제품 라인업 및 브랜드 비주얼이미지 중심의 웹 UI 디자인</h3>
+                        <p>스킨케어·헤어케어 제품과 브랜드 콘텐츠를 일관된 비주얼로 구성한 웹사이트 디자인</p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+
+    </body>
+
+</html>

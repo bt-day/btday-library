@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+        <title>btday 포트폴리오 :: website</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-pf-website.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-detail-main">
+                <section class="sub-detail-main-title">
+                    <div class="sub-detail-main-title-inner">
+                        <p class="bt-breadcrumb">Portfolio > Website > <span class="bt-breadcrumb-sp">Oilbank</span>
+                        </p>
+                        <h2>Oilbank — Gas Station Business Guide</h2>
+                        <p class="bt-description">
+                            주유소 사업을 준비하는 예비 사업자를 위한 사업 안내 웹페이지입니다. 주유소 사업의 주요 특징과 부지 선정부터 개업까지의 절차, 신규 사업자 지원 프로그램을 정보
+                            위계에 맞춰 구성했습니다. PC에서는 단계별 카드와 다단 레이아웃을 활용하고, 모바일에서는 콘텐츠를 세로로 재배치해 사업 정보를 순서대로 탐색할 수 있도록
+                            디자인했습니다.
+                        </p>
+                    </div>
+                </section>
+                <section class="sub-detail-main-banner">
+                    <div class="banner-year-titile">
+                        <p>2022</p>
+                        <p>Web Design / Publishing</p>
+                    </div>
+                    <div class="banner-main-title">
+                        <div class="banner-no-de03 banner-no">01</div>
+                        <div class="banner-main-title-conts">
+                            <h3>Oilbank</h3>
+                            <p>Corporate Website · Business Guide · Responsive UI</p>
+                        </div>
+                        <ul class="website-main-title">
+                            <li>
+                                <h3>CATEGORY</h3>
+                                <p>Web Design / Publishing</p>
+                            </li>
+                            <li>
+                                <h3>TYPE</h3>
+                                <p>Gas Station Business Guide</p>
+                            </li>
+                            <li>
+                                <h3>DESIGN</h3>
+                                <p>Information Architecture / UI Layout</p>
+                            </li>
+                            <li>
+                                <h3>DEVELOPMENT</h3>
+                                <p>HTML / CSS / Publishing</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <picture class="bt-banner-picture">
+                        <!-- 모바일 이미지 -->
+                        <source media="(max-width: 767px)" srcset="bt_assets/images/website/oil-mo.jpg">
+                        <!-- PC 이미지 (기본값) -->
+                        <img src="bt_assets/images/website/oil-pc.png" alt="브랜드 프로모션 배너">
+                    </picture>
+                    <div class="banner-ft-conts">
+                        <div class="banner-ft-unline"></div>
+                        <h3>주유소 사업 안내 웹페이지개업 절차 및 지원 정보 구조화PC·Mobile 정보형 UI 디자인</h3>
+                        <p>사업 절차와 신규 사업자 지원 내용을 단계별 정보구조로 구성한 웹페이지 디자인</p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+
+    </body>
+
+</html>

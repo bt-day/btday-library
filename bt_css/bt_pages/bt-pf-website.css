@@ -1,0 +1,431 @@
+/* btday  pf banner  */
+
+
+.bt-wrapper {
+    position: relative;
+    isolation: isolate;
+    width: min(100%, 1920px);
+    min-height: 100dvh;
+    margin-inline: auto;
+    padding-block: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* center → flex-start */
+    gap: var(--bt-pc-space-wrap-y);
+}
+
+
+/* 상하단 백그라운드 적용  */
+.bt-wrapper__bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    pointer-events: none;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bt-wrapper__bg--top {
+    top: 0;
+    height: 800px;
+
+    background-image: url("/bt_assets/images/top-bg.jpg");
+    background-position: center top;
+    background-size: max(100%, 1200px) auto;
+    background-repeat: no-repeat;
+
+    -webkit-mask-image: linear-gradient(to bottom,
+            #000 75%,
+            transparent 100%);
+    mask-image: linear-gradient(to bottom,
+            #000 75%,
+            transparent 100%);
+}
+
+.bt-wrapper__bg--bottom {
+    bottom: 0;
+    height: 800px;
+    background-image: url("/bt_assets/images/footer-bg.jpg");
+    background-position: center bottom;
+
+    /* 추가: 상단 경계 부드럽게 처리 */
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            #000 35%,
+            #000 100%);
+
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            #000 35%,
+            #000 100%);
+}
+
+
+/* 기존 콘텐츠를 배경보다 위에 배치 */
+.bt-wrapper>main,
+.bt-wrapper>footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header는 Main보다 위에 배치 */
+.bt-wrapper>header {
+    z-index: 10;
+}
+
+
+
+/* ============================================
+           서브페이지 디테일
+===============================================*/
+.sub-detail-main {
+    width: min(calc(100% - 40px), 1440px);
+    margin-inline: auto;
+    min-height: auto;
+    padding-block: 40px;
+
+    /* 백그라운드 지정 */
+    background-color: rgba(255, 255, 255, 0.3);
+    /*backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px); */
+    border: 1px solid rgba(224, 224, 224, 0.3);
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--bt-space-20);
+}
+
+.sub-detail-main-title {
+    width: min(100%, 1440px);
+    margin-inline: auto;
+    min-height: auto;
+}
+
+.sub-detail-main-title-inner {
+    width: min(calc(100% - 40px), 1200px);
+    margin-inline: auto;
+    min-height: auto;
+    padding-block: 40px;
+
+    /* 백그라운드 지정 */
+    background-color: rgba(255, 255, 255, .3);
+    /*backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px); */
+    border: 1px solid rgba(224, 224, 224, 0.3);
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--bt-space-20);
+}
+
+.bt-breadcrumb {
+    padding-inline: 40px;
+    font-size: clamp(var(--bt-font-size-13), calc(1.4vw + 0.7rem), var(--bt-font-size-16));
+    font-weight: var(--bt-font-weight-regular);
+    line-height: var(--bt-line-height-tight);
+}
+
+.bt-breadcrumb-sp {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.sub-detail-main-title-inner>h2 {
+    padding-inline: 40px;
+    font-size: clamp(var(--bt-font-size-24), calc(3.0vw + 0.7rem), var(--bt-font-size-36));
+    font-weight: var(--bt-font-weight-black);
+    line-height: var(--bt-line-height-tight);
+}
+
+.bt-description {
+    padding-inline: 40px;
+    font-size: var(--bt-font-size-14);
+    font-weight: var(--bt-font-weight-regular);
+    line-height: var(--bt-line-height-relaxed);
+}
+
+.title-state-icon {
+    width: min(100%, 640px);
+    padding-inline: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--bt-space-16);
+}
+
+.title-state-group {
+    width: auto;
+    height: 50px;
+    padding-inline: 24px;
+
+    background-color: #fff;
+    border-radius: 24px;
+    border: 1px solid #dddddd;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--bt-space-16);
+}
+
+.title-state-group p {
+    font-size: var(--bt-font-size-14);
+    font-weight: var(--bt-font-weight-bold);
+    line-height: var(--bt-line-height-tight);
+}
+
+.icon-Circle {
+    background-color: blue;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+}
+
+
+
+/*  banner 메인 영역  */
+.sub-detail-main-banner {
+    width: min(calc(100% - 40px), 1200px);
+    margin-inline: auto;
+    min-height: auto;
+    padding-block: 70px;
+
+    /* 백그라운드 지정 */
+    background-color: rgba(255, 255, 255, .3);
+    /*backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px); */
+    border: 1px solid rgba(224, 224, 224, 0.3);
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--bt-space-64);
+}
+
+
+.banner-year-titile {
+    width: min(calc(100% - 80px), 1200px);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-main-title {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--bt-space-24);
+}
+
+.banner-no {
+    width: 120px;
+    width: clamp(6rem, calc(9vw + 0.7rem), 12rem);
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: clamp(var(--bt-font-size-18), calc(2.4vw + 0.7rem), var(--bt-font-size-28));
+    font-weight: var(--bt-font-weight-bold);
+}
+
+.banner-no00 {
+    background-color: #f40909;
+}
+
+.banner-no-de01,
+.banner-no-de02,
+.banner-no-de03 {
+    background-color: #f40909;
+}
+
+.banner-no-photo01,
+.banner-no-photo02 {
+    background-color: #f40909;
+}
+
+
+
+.banner-main-title-conts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--bt-space-4);
+}
+
+.banner-main-title-conts h3 {
+    font-size: clamp(var(--bt-font-size-24), calc(3vw + 0.7rem), var(--bt-font-size-36));
+    font-weight: var(--bt-font-weight-black);
+    line-height: var(--bt-line-height-tight);
+}
+
+.banner-main-title-conts p {
+    font-size: clamp(var(--bt-font-size-12), calc(1.4vw + 0.5rem), var(--bt-font-size-16));
+    font-weight: var(--bt-font-weight-regular);
+    line-height: var(--bt-line-height-tight);
+}
+
+.banner-ft-conts {
+    width: min(100%, 170px);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--bt-space-12);
+}
+
+.banner-ft-unline {
+    width: 30px;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.banner-ft-conts h3 {
+    font-size: clamp(var(--bt-font-size-14), calc(1.6vw + 0.7rem), var(--bt-font-size-18));
+    font-weight: var(--bt-font-weight-black);
+    line-height: var(--bt-line-height-normal);
+    color: #1a1a1a;
+}
+
+.banner-ft-conts p {
+    font-size: clamp(var(--bt-font-size-12), calc(1.2vw + 0.7rem), var(--bt-font-size-14));
+    font-weight: var(--bt-font-weight-regular);
+    line-height: var(--bt-line-height-normal);
+    color: #1a1a1a;
+}
+
+.banner-ft-conts a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* 픽처 테그 적용 배너 작업 */
+.bt-banner-picture {
+    display: block;
+    width: min(calc(100% - 40px), 900px);
+    margin-inline: auto;
+    border: 1px solid #dddddd;
+    border-radius: 24px;
+}
+
+.bt-banner-picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+
+ul.website-main-title {
+    width: min(calc(100% - 40px), 900px);
+    border: 1px solid #dddddd;
+    padding-block: 40px;
+    box-sizing: border-box;
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--bt-space-24);
+}
+
+ul.website-main-title li {
+    flex: 0 1 38%;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--bt-space-4);
+}
+
+ul.website-main-title li h3 {
+    font-size: clamp(var(--bt-font-size-14), calc(1.3vw + 0.6rem), var(--bt-font-size-14));
+    font-weight: var(--bt-font-weight-medium);
+    line-height: var(--bt-line-height-tight);
+    color: #9a9a9a
+}
+
+ul.website-main-title li p {
+    font-size: clamp(var(--bt-font-size-16), calc(1.3vw + 0.6rem), var(--bt-font-size-18));
+    font-weight: var(--bt-font-weight-black);
+    line-height: var(--bt-line-height-normal);
+}
+
+
+
+
+
+
+
+
+
+/*  미디어쿼리 분기  */
+@media (max-width:570px) {
+    ul.website-main-title li {
+        flex: 0 1 calc(100% - 80px);
+    }
+}
+
+
+@media (max-width:375px) {
+    .banner-year-titile {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:320px) {
+    .banner-main-title-conts {
+        gap: var(--bt-space-12);
+    }
+
+    .banner-year-titile p {
+        text-align: center;
+    }
+
+    .banner-main-title-conts h3 {
+        text-align: center;
+    }
+
+    .banner-main-title-conts p {
+        text-align: center;
+        padding-inline: 20px;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*    */

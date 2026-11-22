@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+        <title>btday 포트폴리오 :: 명지전기 기술소개 페이지</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-pf-banner.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-detail-main">
+                <section class="sub-detail-main-title">
+                    <div class="sub-detail-main-title-inner">
+                        <p class="bt-breadcrumb">Portfolio > Detail Design > <span
+                                class="bt-breadcrumb-sp">Technology</span></p>
+                        <h2>PCE Electric — Technology</h2>
+                        <p class="bt-description">
+                            PCE 산업용 전기 연결 제품의 기술 규격과 안전성, 사용 환경을 소개하는 정보형 페이지입니다. 제품 적용 분야를 보여주는 이미지와 국제 규격, 주요 정격 전류 및
+                            사용 온도 정보를 구분해 복잡한 기술 정보를 직관적으로 전달하도록 구성했습니다.
+                        </p>
+                    </div>
+                </section>
+                <section class="sub-detail-main-banner">
+                    <div class="banner-year-titile">
+                        <p>2023</p>
+                        <p>web & edtorial design</p>
+                    </div>
+                    <div class="banner-main-title">
+                        <div class="banner-no-de03 banner-no">04</div>
+                        <div class="banner-main-title-conts">
+                            <h3>PCE Electric Technology Standard</h3>
+                            <p>Technical Information · Visual Communication · Responsive Layout</p>
+                        </div>
+                    </div>
+                    <picture class="bt-banner-picture">
+                        <!-- 모바일 이미지 -->
+                        <source media="(max-width: 767px)" srcset="bt_assets/images/detail/tech-mo.jpg">
+                        <!-- PC 이미지 (기본값) -->
+                        <img src="bt_assets/images/detail/tech-pc.jpg" alt="브랜드 프로모션 배너">
+                    </picture>
+                    <div class="banner-ft-conts">
+                        <div class="banner-ft-unline"></div>
+                        <h3>산업용 전기 기술 소개제품 규격 및 기술 정보 구조화반응형 웹 콘텐츠 디자인</h3>
+                        <p>기술 규격과 제품 적용 환경을 시각화한 정보 중심의 반응형 페이지 설계</p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+
+    </body>
+
+</html>

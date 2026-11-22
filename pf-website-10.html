@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+        <title>btday 포트폴리오 :: website</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-pf-website.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-detail-main">
+                <section class="sub-detail-main-title">
+                    <div class="sub-detail-main-title-inner">
+                        <p class="bt-breadcrumb">Portfolio > Website > <span class="bt-breadcrumb-sp">Corporate Website
+                                Collection</span>
+                        </p>
+                        <h2>Corporate Website Collection — Media & Industrial Services</h2>
+                        <p class="bt-description">
+                            광고·엔터테인먼트, 산업기술, 음향 제작 분야의 기업 웹사이트 디자인 프로젝트 모음입니다. 오투미디어는 광고 모델 및 캐스팅 콘텐츠를 중심으로, 수경PST는
+                            산업제품과 기술 정보를 중심으로, GIO Sound는 녹음 스튜디오의 시설과 음향 제작 환경을 중심으로 구성했습니다. 업종별 사업 특성과 전달해야 할 정보를 고려해
+                            각기 다른 비주얼과 UI 레이아웃을 적용했습니다.
+                        </p>
+                    </div>
+                </section>
+                <section class="sub-detail-main-banner">
+                    <div class="banner-year-titile">
+                        <p>2020</p>
+                        <p>Web Design / Publishing</p>
+                    </div>
+                    <div class="banner-main-title">
+                        <div class="banner-no-de03 banner-no">01</div>
+                        <div class="banner-main-title-conts">
+                            <h3>Corporate Website Collection</h3>
+                            <p>Media Agency · Industrial Products · Sound Studio</p>
+                        </div>
+                        <ul class="website-main-title">
+                            <li>
+                                <h3>CATEGORY</h3>
+                                <p>Web Design</p>
+                            </li>
+                            <li>
+                                <h3>TYPE</h3>
+                                <p>Corporate Website Collection</p>
+                            </li>
+                            <li>
+                                <h3>DESIGN</h3>
+                                <p>Visual Design / UI Layout</p>
+                            </li>
+                            <li>
+                                <h3>CONTENT</h3>
+                                <p>Media / Industrial / Audio</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <picture class="bt-banner-picture">
+                        <!-- 모바일 이미지 -->
+                        <source media="(max-width: 767px)" srcset="bt_assets/images/website/etc02-mo.jpg">
+                        <!-- PC 이미지 (기본값) -->
+                        <img src="bt_assets/images/website/etc02-pc.jpg" alt="브랜드 프로모션 배너">
+                    </picture>
+                    <div class="banner-ft-conts">
+                        <div class="banner-ft-unline"></div>
+                        <h3>기업형 웹사이트 디자인 컬렉션광고·산업기술·음향 스튜디오업종별 맞춤형 UI·비주얼 구성</h3>
+                        <p>기업의 사업 특성과 주요 콘텐츠를 중심으로 정보 전달 목적에 맞춰 구성한 웹디자인 작업</p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+
+    </body>
+
+</html>

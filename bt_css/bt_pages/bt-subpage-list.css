@@ -443,7 +443,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: var(--bt-space-8);
+    gap: var(--bt-space-16);
 }
 
 .subpage-list-cont h3 {
@@ -455,7 +455,7 @@
 .subpage-list-cont p {
     font-size: clamp(var(--bt-font-size-12), calc(1.5vw + 1rem), var(--bt-font-size-14));
     font-weight: var(--bt-font-weight-regular);
-    line-height: var(--bt-line-height-tight);
+    line-height: var(--bt-line-height-normal);
 }
 
 

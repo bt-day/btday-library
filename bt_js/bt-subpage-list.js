@@ -169,7 +169,7 @@ async function loadSubpageList() {
 
         // Pagination 상태
         let currentPage = 1;
-        const itemsPerPage = 7; // QA용, 완료 후 변경
+        const itemsPerPage = 10; // QA용, 완료 후 변경
 
 
         // 현재 정렬 기준에 따라 목록 정렬

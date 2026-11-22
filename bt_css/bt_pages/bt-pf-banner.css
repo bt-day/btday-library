@@ -236,7 +236,6 @@
 }
 
 .banner-no {
-    background-color: #f40909;
     width: 120px;
     width: clamp(6rem, calc(9vw + 0.7rem), 12rem);
     aspect-ratio: 1 / 1;
@@ -250,6 +249,23 @@
     font-size: clamp(var(--bt-font-size-18), calc(2.4vw + 0.7rem), var(--bt-font-size-28));
     font-weight: var(--bt-font-weight-bold);
 }
+
+.banner-no00 {
+    background-color: #f40909;
+}
+
+.banner-no-de01,
+.banner-no-de02,
+.banner-no-de03 {
+    background-color: #f40909;
+}
+
+.banner-no-photo01,
+.banner-no-photo02 {
+    background-color: #f40909;
+}
+
+
 
 .banner-main-title-conts {
     display: flex;
@@ -322,7 +338,7 @@
 /* 픽처 테그 적용 배너 작업 */
 .bt-banner-picture {
     display: block;
-    width: min(calc(100% - 80px), 900px);
+    width: min(calc(100% - 40px), 900px);
     margin-inline: auto;
 }
 
@@ -340,7 +356,7 @@
 
 
 /*  미디어쿼리 분기  */
-@media (max-width:1186px) {}
+
 
 
 @media (max-width:768px) {
@@ -349,6 +365,17 @@
     }
 
 }
+
+@media (max-width:530px) {
+    .banner-main-title-conts h3 {
+        text-align: center;
+    }
+
+    .banner-main-title-conts p {
+        text-align: center;
+    }
+}
+
 
 
 @media (max-width:450px) {

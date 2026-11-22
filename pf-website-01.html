@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+        <title>btday 포트폴리오 :: website</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-pf-website.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-detail-main">
+                <section class="sub-detail-main-title">
+                    <div class="sub-detail-main-title-inner">
+                        <p class="bt-breadcrumb">Portfolio > Website > <span class="bt-breadcrumb-sp">Diva
+                                Page</span></p>
+                        <h2>Diva Page — Responsive Brand Website</h2>
+                        <p class="bt-description">
+                            프리미엄 오디오 제품의 브랜드 이미지와 제품 콘텐츠를 중심으로 설계한 반응형 웹사이트 프로젝트입니다. 제품 비주얼과 타이포그래피, 여백을 활용한 화면 구성에 중점을
+                            두고, PC와 모바일 환경에 맞춰 콘텐츠 배치와 레이아웃을 조정했습니다. HTML/CSS 기반 퍼블리싱과 반응형 UI 구현을 통해 디자인과 실제 웹 화면을
+                            연결했습니다.
+                        </p>
+                    </div>
+                </section>
+                <section class="sub-detail-main-banner">
+                    <div class="banner-year-titile">
+                        <p>2026</p>
+                        <p>Web Design / Publishing</p>
+                    </div>
+                    <div class="banner-main-title">
+                        <div class="banner-no-de03 banner-no">01</div>
+                        <div class="banner-main-title-conts">
+                            <h3>Diva Page</h3>
+                            <p>Brand Website · UI Design · Responsive Publishing</p>
+                        </div>
+                        <ul class="website-main-title">
+                            <li>
+                                <h3>CATEGORY</h3>
+                                <p>Web Design / Publishing</p>
+                            </li>
+                            <li>
+                                <h3>TYPE</h3>
+                                <p>Brand Website</p>
+                            </li>
+                            <li>
+                                <h3>DESIGN</h3>
+                                <p>Figma / UI Layout</p>
+                            </li>
+                            <li>
+                                <h3>DEVELOPMENT</h3>
+                                <p>HTML / CSS / Responsive</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <picture class="bt-banner-picture">
+                        <!-- 모바일 이미지 -->
+                        <source media="(max-width: 767px)" srcset="bt_assets/images/website/diva-mo.jpg">
+                        <!-- PC 이미지 (기본값) -->
+                        <img src="bt_assets/images/website/diva-pc.jpg" alt="브랜드 프로모션 배너">
+                    </picture>
+                    <div class="banner-ft-conts">
+                        <div class="banner-ft-unline"></div>
+                        <h3>프리미엄 오디오 브랜드 웹사이트제품 중심의 UI·비주얼 구성반응형 웹 디자인 및 퍼블리싱</h3>
+                        <p>브랜드 이미지와 제품 콘텐츠를 중심으로 PC·Mobile 환경에 대응한 웹사이트 설계</p>
+                        <a href="https://diva-page.shop/" target="_blank">View Live Website</a>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+        <title>btday 포트폴리오 :: website</title>
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-pf-website.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-detail-main">
+                <section class="sub-detail-main-title">
+                    <div class="sub-detail-main-title-inner">
+                        <p class="bt-breadcrumb">Portfolio > Website > <span class="bt-breadcrumb-sp">Tradeinfo</span>
+                        </p>
+                        <h2>Tradeinfo — Trade Information Website</h2>
+                        <p class="bt-description">
+                            무역·물류 분야의 실무 정보와 상담 콘텐츠를 제공하는 웹사이트 프로젝트입니다. 정보 공유 게시판, 무역·물류 업무, 자격증 관련 Q&A, 사고·작업 사례 등 다양한
+                            콘텐츠를 사용 목적에 따라 분류하고, PC에서는 다단 정보 레이아웃을, 모바일에서는 목록과 콘텐츠 탐색 중심의 화면 구성을 적용했습니다.
+                        </p>
+                    </div>
+                </section>
+                <section class="sub-detail-main-banner">
+                    <div class="banner-year-titile">
+                        <p>2022</p>
+                        <p>Web Design / Publishing</p>
+                    </div>
+                    <div class="banner-main-title">
+                        <div class="banner-no-de03 banner-no">01</div>
+                        <div class="banner-main-title-conts">
+                            <h3>Tradeinfo</h3>
+                            <p>Trade Information · Community · Responsive Web</p>
+                        </div>
+                        <ul class="website-main-title">
+                            <li>
+                                <h3>CATEGORY</h3>
+                                <p>Web Design / Publishing</p>
+                            </li>
+                            <li>
+                                <h3>TYPE</h3>
+                                <p>Information / Community Website</p>
+                            </li>
+                            <li>
+                                <h3>DESIGN</h3>
+                                <p>UI Layout / Information Structure</p>
+                            </li>
+                            <li>
+                                <h3>DEVELOPMENT</h3>
+                                <p>PC / Mobile Layout</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <picture class="bt-banner-picture">
+                        <!-- 모바일 이미지 -->
+                        <source media="(max-width: 767px)" srcset="bt_assets/images/website/trade-mo.jpg">
+                        <!-- PC 이미지 (기본값) -->
+                        <img src="bt_assets/images/website/trade-pc.jpg" alt="브랜드 프로모션 배너">
+                    </picture>
+                    <div class="banner-ft-conts">
+                        <div class="banner-ft-unline"></div>
+                        <h3>무역실무 정보·상담 웹사이트게시판 및 커뮤니티 중심의 정보구조PC·Mobile 대응 UI 디자인</h3>
+                        <p>다양한 무역·물류 정보를 목적별로 분류하고 사용자 탐색 흐름에 맞춰 구성한 웹사이트 디자인</p>
+
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+
+    </body>
+
+</html>
