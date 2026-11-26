@@ -1,0 +1,64 @@
+# Basic Marquee v1.0
+
+## Overview
+
+Basic Marquee is a responsive, continuously scrolling component designed for brand logos, 
+partner showcases, and portfolio collections.
+
+It combines CSS keyframe animation with JavaScript DOM cloning to create a 
+seamless horizontal scrolling experience.
+
+## Key Features
+
+- **Infinite Scrolling:** Continuous right-to-left movement with seamless repetition.
+- **Hover Pause:** Automatically pauses when the pointer enters the marquee viewport.
+- **Card Hover Effect:** Individual cards move upward by 5px on hover.
+- **Responsive Layout:** Card sizing adapts to different screen widths.
+- **Dynamic Distance Calculation:** JavaScript measures the scrolling distance 
+and passes it to CSS through a custom property.
+- **DOM Cloning:** Automatically duplicates original items to maintain continuous scrolling.
+- **Keyboard Support:** Original links remain keyboard-accessible, while duplicate links 
+are removed from the sequential Tab order.
+
+## Component Structure
+
+- `bt-marquee` — Main component container.
+- `bt-marquee__viewport` — Visible area and overflow control.
+- `bt-marquee__track` — Horizontal item layout and scrolling animation.
+- `bt-marquee__item` — Individual card container.
+- `bt-marquee__link` — Interactive link and hover effect.
+- `bt-marquee__media` — Image or logo content.
+
+## Interaction Behavior
+
+1. JavaScript selects the original marquee items.
+2. Original items are cloned and appended to the track.
+3. Duplicate items are excluded from sequential keyboard navigation.
+4. JavaScript calculates the distance between repeated groups.
+5. CSS animates the track horizontally using the calculated distance.
+6. Hovering over the viewport pauses the animation.
+7. Leaving the viewport resumes scrolling.
+8. Keyboard-visible focus pauses the animation.
+
+## Accessibility Notes
+
+Duplicate content uses `aria-hidden` and removes duplicated links from sequential Tab navigation.
+
+Keyboard navigation should be tested to ensure that focused original items remain visible.
+
+Version 1.0 does not include dedicated playback controls, off-screen focus management, 
+or reduced-motion handling. These features are planned for an extended version.
+
+## Recommended Use Cases
+
+- Brand and partner logo showcases
+- Client and corporate identity sections
+- E-commerce brand collections
+- Portfolio and project showcases
+- Promotional content strips
+
+## Version
+
+v1.0 — Basic Infinite Marquee
+
+**Status:** Core interaction complete. Advanced accessibility controls are planned for a future version.

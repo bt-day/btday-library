@@ -1,0 +1,146 @@
+/*   뷰티데이 라이브러리  marquee   */
+
+
+
+
+/*   하단 bt-marquee 슬라이더   */
+.bt-marquee {
+    width: min(calc(100% - 40px), 900px);
+    margin-inline: auto;
+    height: auto;
+    margin-top: 60px;
+    padding-block: 60px;
+
+    /* 백그라운드 지정 */
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(173, 172, 172, 0.3);
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--bt-space-32);
+
+    z-index: 2;
+}
+
+.bt-marquee-title {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--bt-space-6);
+}
+
+.bt-marquee-title h3 {
+    font-size: var(--bt-font-size-18);
+    font-weight: var(--bt-font-weight-black);
+    line-height: var(--bt-line-height-tight);
+}
+
+.bt-marquee-title p {
+    font-size: var(--bt-font-size-14);
+    font-weight: var(--bt-font-weight-regular);
+    line-height: var(--bt-line-height-tight);
+}
+
+
+.bt-marquee__viewport {
+    width: 100%;
+    overflow: hidden;
+    padding-block: 8px;
+}
+
+
+.bt-marquee__track {
+    width: max-content;
+
+    display: flex;
+    gap: var(--bt-space-16);
+}
+
+.bt-marquee__track {
+    width: max-content;
+
+    display: flex;
+    gap: var(--bt-space-16);
+
+    animation: bt-marquee-scroll 30s linear infinite;
+}
+
+@keyframes bt-marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-1 * var(--bt-marquee-distance, 0px)));
+    }
+}
+
+.bt-marquee__viewport:hover .bt-marquee__track,
+.bt-marquee:has(.bt-marquee__link:focus-visible) .bt-marquee__track {
+    animation-play-state: paused;
+}
+
+
+.bt-marquee__item {
+    flex: 0 0 200px;
+}
+
+.bt-marquee__link {}
+
+.bt-marquee__media {}
+
+@media (max-width:768px) {
+    .bt-marquee__item {
+        flex: 0 0 180px;
+    }
+}
+
+
+.bt-marquee__item {
+    flex: 0 0 200px;
+}
+
+.bt-marquee__link {
+    display: block;
+    overflow: hidden;
+    border-radius: 14px;
+
+    transition: transform 250ms ease;
+}
+
+.bt-marquee__link:hover {
+    transform: translateY(-5px);
+}
+
+.bt-marquee__link:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: -2px;
+}
+
+.bt-marquee__media {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+/*  미디어쿼리 분기  */
+@media (max-width:450px) {}
+
+
+
+
+/*  섹션 종료  */
