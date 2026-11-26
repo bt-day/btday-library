@@ -553,6 +553,191 @@
 
 
 
+/* 통합검색용 추가 css */
+
+/*  2뎁스 목록 리스트 박스 적용   */
+.subpage-list-box {
+    width: min(calc(100% - 40px), 1200px);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--bt-space-16);
+}
+
+.subpage-list-box>li {
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, .3);
+    /*
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px); */
+}
+
+
+
+/* 링크: 내부 콘텐츠 배치 담당 */
+.subpage-list-box>li>a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--bt-space-28);
+
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+/* 2Depth 검색 결과 없음 */
+.subpage-list-box>.subpage-list-empty {
+    min-height: 220px;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    text-align: center;
+}
+
+.subpage-list-empty>p {
+    font-size: var(--bt-font-size-18);
+    font-weight: var(--bt-font-weight-bold);
+}
+
+.subpage-list-empty>span {
+    font-size: var(--bt-font-size-14);
+    color: #666;
+}
+
+
+
+.subpage-list-icon {
+    flex: 0 1 auto;
+
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    background-color: #e8e8ff;
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.subpage-list-icon img {
+    width: 42px;
+    height: 42px;
+}
+
+/* 소스 등록 완료일 때만 색상 변경 */
+.subpage-list-icon.is-ready {
+    background-color: #1745d8;
+    color: #fff;
+}
+
+.subpage-list-icon.is-ready:not(.is-thumbnail) img {
+    filter: brightness(0) invert(1);
+}
+
+
+
+/* 포트폴리오 파트 썸네일 적용 */
+.subpage-list-icon.is-thumbnail {
+    background: transparent;
+    padding: 0;
+    overflow: hidden;
+}
+
+.subpage-list-icon.is-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.subpage-list-cont {
+    flex: 1 1 80%;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--bt-space-16);
+}
+
+.subpage-list-cont h3 {
+    font-size: clamp(var(--bt-font-size-14), calc(1.5vw + 1rem), var(--bt-font-size-18));
+    font-weight: var(--bt-font-weight-black);
+    line-height: var(--bt-line-height-tight);
+}
+
+.subpage-list-cont p {
+    font-size: clamp(var(--bt-font-size-12), calc(1.5vw + 1rem), var(--bt-font-size-14));
+    font-weight: var(--bt-font-weight-regular);
+    line-height: var(--bt-line-height-normal);
+}
+
+
+.subpage-list-meta {
+    flex: 1 1 10%;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--bt-space-8);
+}
+
+.subpage-list-meta p {
+    font-size: clamp(var(--bt-font-size-12), calc(1.5vw + 1rem), var(--bt-font-size-14));
+    font-weight: var(--bt-font-weight-regular);
+    line-height: var(--bt-line-height-tight);
+}
+
+.subpage-list-meta>a,
+.subpage-list-meta>span {
+    font-size: clamp(var(--bt-font-size-12), calc(1.5vw + 1rem), var(--bt-font-size-14));
+    font-weight: var(--bt-font-weight-bold);
+    line-height: var(--bt-line-height-tight);
+}
+
+
+
+@media (max-width:640px) {
+    .subpage-list-box>li>a {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subpage-list-meta {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+/* 통합검색 목록의 초기 숨김 상태 보장 */
+.subpage-list-box[hidden] {
+    display: none;
+}
+
+/* 통합검색 시 1Depth 목록 숨김 상태 보장 */
+.subpage-subpd-box[hidden] {
+    display: none;
+}
+
+
+
 
 /* Empty State — 공통 목록 영역 */
 .subpage-subpd-box>.bt-empty-state {

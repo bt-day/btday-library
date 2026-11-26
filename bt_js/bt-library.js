@@ -60,7 +60,7 @@ function renderLibrary(items, emptyType = "category", currentPage = 1, itemsPerP
                     <a
                         class="bt-card-hitarea"
                         href="${item.url}"
-                        aria-label="${item.title} 목록 보기"
+                        aria-label="${item.title} ${item.isEntry ? '상세 보기' : '목록 보기'}"
                     ></a>
                 ` : ""}
 
@@ -155,16 +155,117 @@ async function loadLibrary() {
         let currentEmptyType = "category";
 
 
-        // 현재 페이지 데이터 렌더링
-        function renderCurrentPage() {
-            renderLibrary(
-                currentItems,
-                currentEmptyType,
-                currentPage,
-                itemsPerPage
+
+
+
+        // 통합검색 결과를 2Depth 목록 UI로 출력
+        function renderSearchList() {
+            const list = document.querySelector(".subpage-list-box");
+            const count = document.querySelector("#subpage-count");
+            const sortSelect = document.querySelector("#subpage-sort");
+
+            // ① 원본 배열을 보호하면서 정렬
+            const sortedItems = [...currentItems];
+
+            if (sortSelect?.value === "title-asc") {
+                sortedItems.sort((a, b) =>
+                    a.title.localeCompare(b.title, "en")
+                );
+            }
+
+            if (sortSelect?.value === "title-desc") {
+                sortedItems.sort((a, b) =>
+                    b.title.localeCompare(a.title, "en")
+                );
+            }
+
+            // ② 현재 페이지에 출력할 데이터 추출
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const pageItems = sortedItems.slice(
+                startIndex,
+                startIndex + itemsPerPage
             );
+
+            // ③ 전체 검색 결과 개수
+            count.textContent = currentItems.length;
+
+            // ④ 검색 결과가 없는 경우
+            if (currentItems.length === 0) {
+                list.innerHTML = `
+                    <li class="subpage-list-empty">
+                        <p>No results found.</p>
+                        <span>Try a different keyword.</span>
+                    </li>
+                `;
+                return;
+            }
+
+            // ⑤ 기존 2Depth 목록 구조 재사용
+            list.innerHTML = pageItems.map((item) => `
+                <li>
+                    <a href="${item.url}">
+                        <div class="subpage-list-icon
+                            ${item.sourceStatus === "ready" ? "is-ready" : ""}
+                            ${item.category === "portfolio" && item.thumbnail ? "is-thumbnail" : ""}">
+                            <img
+                                src="${item.thumbnail || 'bt_assets/1depth/device-desktop.svg'}"
+                                alt=""
+                            />
+                        </div>
+
+                        <div class="subpage-list-cont">
+                            <h3>${item.title}</h3>
+                            <p>${item.description ?? ""}</p>
+                        </div>
+
+                        <div class="subpage-list-meta">
+                            <p>${item.isEntry
+                    ? (item.version
+                        ? `v${item.version} · ${item.status ?? ""}`
+                        : item.status ?? "")
+                    : "Category"}</p>
+                            <span>View Details</span>
+                        </div>
+                    </a>
+                </li>
+            `).join("");
+        }
+
+
+
+
+        function renderCurrentPage() {
+            // ① 출력 영역 찾기
+            const categoryList = document.querySelector(".subpage-subpd-box");
+            const searchList = document.querySelector(".subpage-list-box");
+
+            // ② 현재 화면이 검색 상태인지 확인
+            const isSearch = currentEmptyType === "search" &&
+                searchInput.value.trim() !== "";
+
+            // ③ 검색 상태에 따라 출력 영역 전환
+            categoryList.hidden = isSearch;
+            searchList.hidden = !isSearch;
+
+            if (isSearch) {
+                // 통합검색: 2Depth 목록 UI
+                renderSearchList();
+            } else {
+                // 일반 탐색: 기존 1Depth 카드 UI
+                renderLibrary(
+                    currentItems,
+                    currentEmptyType,
+                    currentPage,
+                    itemsPerPage
+                );
+            }
+
+            // ④ 페이지네이션은 공통 사용
             renderPagination();
         }
+
+
+
 
 
         // Pagination 페이지 번호 출력
@@ -299,10 +400,17 @@ async function loadLibrary() {
 
 
 
+
         function searchLibrary() {
             const keyword = searchInput.value.trim().toLowerCase();
 
-            // 1Depth 카드의 영문 제목 + 한글 제목 + 설명 통합 검색
+            // 검색어가 없다면 기존 전체 카테고리 화면으로 복귀
+            if (!keyword) {
+                showCategory("all");
+                return;
+            }
+
+            // ① 기존 1Depth·2Depth 카테고리 카드 검색
             const searchedItems = data.items.filter((item) => {
                 const searchText = [
                     item.title,
@@ -313,23 +421,68 @@ async function loadLibrary() {
                 return searchText.includes(keyword);
             });
 
-            // 현재 검색 결과 상태 갱신
-            currentItems = searchedItems;
+            // ② 개별 컴포넌트·포트폴리오 검색
+            const searchedEntries = data.entries
+                .filter((entry) => {
+                    // 이동할 상세페이지가 없는 자료는 제외
+                    if (!entry.url) return false;
+
+                    const category = data.categories.find(
+                        (item) => item.id === entry.category
+                    );
+
+                    const subcategory = category?.children?.find(
+                        (item) => item.id === entry.subcategory
+                    );
+
+                    const searchText = [
+                        entry.title,
+                        entry.description,
+                        category?.label,
+                        subcategory?.label
+                    ].filter(Boolean).join(" ").toLowerCase();
+
+                    return searchText.includes(keyword);
+                })
+                .map((entry) => {
+                    const category = data.categories.find(
+                        (item) => item.id === entry.category
+                    );
+
+                    const subcategory = category?.children?.find(
+                        (item) => item.id === entry.subcategory
+                    );
+
+                    // 기존 renderLibrary() 카드 형식에 맞추기
+                    return {
+                        ...entry,
+                        isEntry: true,
+                        cardHeading: [
+                            category?.label,
+                            subcategory?.label
+                        ].filter(Boolean).join(" · "),
+                        symbol: entry.title.charAt(0).toUpperCase(),
+                        year: /^\d{4}$/.test(entry.status)
+                            ? entry.status
+                            : "2026",
+                        field: "Library Entry"
+                    };
+                });
+
+            // ③ 두 검색 결과를 하나로 합치기
+            currentItems = [...searchedItems, ...searchedEntries];
             currentEmptyType = "search";
             currentPage = 1;
 
-            // 현재 페이지 출력
+            // ④ 기존 렌더링·페이지네이션 재사용
             renderCurrentPage();
 
-            if (keyword) {
-                renderPageTitle(
-                    "Search Results",
-                    `Results for "${searchInput.value.trim()}"`
-                );
-            } else {
-                renderPageTitle("Explore Library", "Browse all resources");
-            }
+            renderPageTitle(
+                "Search Results",
+                `Results for "${searchInput.value.trim()}"`
+            );
 
+            // ⑤ 기존 카테고리 버튼 상태 유지
             buttons.forEach((button) => {
                 button.classList.remove("is-active");
             });
@@ -338,6 +491,10 @@ async function loadLibrary() {
                 .querySelector('[data-category="all"]')
                 .classList.add("is-active");
         }
+
+
+
+
 
         searchForm.addEventListener("submit", (event) => {
             event.preventDefault();
