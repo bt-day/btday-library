@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>btday sub detail</title>
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="BTDAY Component Library">
+        <meta property="og:description" content="Responsive UI · Interaction · AJAX">
+        <meta property="og:image"
+            content="https://bt-day.github.io/btday-library/bt_assets/images/og-favicon/btday-og.png">
+        <meta property="og:url" content="https://bt-day.github.io/btday-library/">
+        <link rel="icon" type="image/png" href="bt_assets/images/og-favicon/btday-p.svg">
+
+        <meta name="twitter:card" content="summary_large_image">
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="bt_css/bt_base/bt_reset.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_common.css" rel="stylesheet">
+        <link href="bt_css/bt_base/bt_layouts.css" rel="stylesheet">
+
+        <!-- Token -->
+        <link href="bt_css/bt_tokens/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- Header / Footer 공통 컴포넌트 -->
+        <link rel="stylesheet" href="bt_css/bt_components/bt-header-footer.css">
+
+        <!-- 페이지 전용 CSS : 서브 공통페이지 -->
+        <link rel="stylesheet" href="bt_css/bt_pages/bt-sub-detail.css">
+
+    </head>
+
+    <body>
+
+        <div class="bt-wrapper">
+            <!-- 장식 배경 : 개별 위치 제어 -->
+            <div class="bt-wrapper__bg bt-wrapper__bg--top" aria-hidden="true"></div>
+            <div class="bt-wrapper__bg bt-wrapper__bg--bottom" aria-hidden="true"></div>
+
+            <!-- Header Include 삽입 위치 -->
+            <div id="bt-header-include"></div>
+
+            <main class="sub-detail-main">
+                <section class="sub-detail-main-title">
+                    <div class="sub-detail-main-title-inner">
+                        <p class="bt-breadcrumb">component > Patterns > <span class="bt-breadcrumb-sp">Gallery &
+                                Slider02</span></p>
+                        <h2>Dual Row Reverse Marquee</h2>
+                        <p class="bt-description">
+                            A responsive dual-row marquee featuring continuous horizontal scrolling in opposite
+                            directions, independent hover-to-pause interactions, and reusable JavaScript track controls.
+                        </p>
+                        <ul class="title-state-icon">
+                            <li>
+                                <div class="title-state-group">
+                                    <div class="icon-Circle"></div>
+                                    <p>v1.0</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title-state-group">
+                                    <img src="bt_assets/1depth/device-desktop.svg" alt="" />
+                                    <p>Responsive</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title-state-group">
+                                    <img src="bt_assets/1depth/patterns.svg" alt="" />
+                                    <p>Infinite Scroll</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="live-preview">
+                    <div class="live-preview-inner">
+                        <div class="live-preview-inner-top">
+                            <div class="left-main-title">
+                                <img src="bt_assets/1depth/device-imac.svg" alt="" />
+                                <p>LIVE PREVIEW</p>
+                            </div>
+                            <div class="right-icon-group">
+                                <button type="button" data-device="desktop" aria-label="PC 미리보기" aria-pressed="true">
+                                    <img src="bt_assets/1depth/device-imac.svg" alt="" />
+                                </button>
+                                <button type="button" data-device="mobile" aria-label="모바일 미리보기" aria-pressed="false">
+                                    <img src="bt_assets/1depth/device-mobile-code.svg" alt="" />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="live-preview-inner-iframe" style="height:600px;">
+                            <iframe src="component/gallery-slider/bt-marquee02.html" title="BTDAY Gallery Live Preview"
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bt-code-edit">
+                    <div class="bt-code-edit-inner">
+                        <div class="bt-code-edit-inner-top">
+                            <div class="bt-code-edit-left-main-title">
+                                <img src="bt_assets/1depth/code.svg" alt="" />
+                                <p>SOURCE CODE</p>
+                            </div>
+                            <div class="bt-code-edit-right-breadchrome">
+                                HTML / CSS / JS / Overview
+                            </div>
+                        </div>
+                        <div class="bt-code-edit-keyword-btn">
+                            <button type="button" data-code="html" aria-pressed="true">
+                                <img src="bt_assets/1depth/brand-html5.svg" alt="" />
+                                <div class="bt-code-edit-keyword-btn-title">
+                                    <h3>HTML</h3>
+                                    <p>Markup example</p>
+                                </div>
+                            </button>
+                            <button type="button" data-code="css" aria-pressed="false">
+                                <img src="bt_assets/1depth/brand-css3.svg" alt="" />
+                                <div class="bt-code-edit-keyword-btn-title">
+                                    <h3>CSS</h3>
+                                    <p>Styling and theming</p>
+                                </div>
+                            </button>
+                            <button type="button" data-code="js" aria-pressed="false">
+                                <img src="bt_assets/1depth/file-type-js.svg" alt="" />
+                                <div class="bt-code-edit-keyword-btn-title">
+                                    <h3>JS</h3>
+                                    <p>Optional behaviors</p>
+                                </div>
+                            </button>
+                            <button type="button" data-code="overview" aria-pressed="false">
+                                <img src="bt_assets/1depth/zoom-pan.svg" alt="" />
+                                <div class="bt-code-edit-keyword-btn-title">
+                                    <h3>Overview</h3>
+                                    <p>What it is ...</p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class=" bt-code-edit-board">
+                            <div class="bt-code-edit-board-title">
+                                <h3>MARKUP(HTML)</h3>
+                                <div class="bt-code-edit-board-title-right">
+                                    <p>HTML</p>
+                                    <button type="button" aria-pressed="true"><img src="bt_assets/1depth/copy.svg"
+                                            alt="" /></button>
+                                </div>
+                            </div>
+                            <div class="bt-code-edit-board-result">
+                                <pre><code id="bt-source-code"
+                                           data-html="component/gallery-slider/bt-marquee02.html"
+                                           data-css="component/gallery-slider/css/bt_marquee02.css"
+                                           data-js="component/gallery-slider/js/bt-marquee02.js"
+                                           data-overview="component/gallery-slider/overview/overview02.txt"></code></pre>
+                            </div>
+                        </div>
+                        <div class="bt-code-download">
+                            <a href="component/gallery-slider/bt-marquee02.html" download>
+                                <img src="bt_assets/1depth/download.svg" alt="" />
+                                <p>HTML</p>
+                            </a>
+
+                            <a href="component/gallery-slider/css/bt_marquee02.css" download>
+                                <img src="bt_assets/1depth/download.svg" alt="" />
+                                <p>CSS</p>
+                            </a>
+
+                            <a href="component/gallery-slider/js/bt-marquee02.js" download>
+                                <img src="bt_assets/1depth/download.svg" alt="" />
+                                <p>JS</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <!-- Footer Include 삽입 위치 -->
+            <div id="bt-footer-include"></div>
+
+        </div>
+
+
+        <script src="bt_js/bt-header.js"></script>
+        <script src="bt_js/bt-mobile-nav.js"></script>
+        <script src="bt_js/bt-include.js"></script>
+        <!-- 서브페이지 라이브러리 데이터 -->
+        <script src="bt_js/bt-library.js"></script>
+        <!-- 아이프레임 right 버튼탭 제어용 -->
+        <script src="bt_js/bt-sub-detail.js"></script>
+
+    </body>
+
+</html>

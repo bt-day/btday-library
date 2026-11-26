@@ -676,11 +676,12 @@
             "subcategory": "gallery-slider",
             "variant": "image-gallery",
             "title": "Gallery & Slider Marquee02",
+            "sourceStatus": "ready",
             "description": "A responsive gallery pattern featuring image transitions, thumbnail navigation, and interactive slider controls.",
             "thumbnail": "",
             "version": "",
             "status": "planned",
-            "url": ""
+            "url": "com-gallery-slider-marquee02.html"
         },
         {
             "id": "patterns-gallery-slider-basic",

@@ -1,0 +1,73 @@
+# Dual Row Reverse Marquee v1.0
+
+## Overview
+
+Dual Row Reverse Marquee is a responsive, continuously scrolling component featuring 
+two horizontal rows moving in opposite directions.
+
+Built with CSS keyframe animations and JavaScript DOM cloning, it provides a reusable 
+interface for brand logos, client portfolios, partner showcases, and promotional collections.
+
+Each row operates independently while sharing the same JavaScript logic.
+
+## Key Features
+
+- **Dual Row Layout:** Displays two horizontally scrolling rows arranged vertically.
+- **Reverse Scrolling:** The upper row moves left while the lower row moves right.
+- **Infinite Loop:** Repeated content creates a seamless continuous scrolling effect.
+- **Independent Hover Pause:** Hovering over one row pauses only that row.
+- **Card Hover Effect:** Individual cards move upward by 5px on hover.
+- **Responsive Layout:** Card sizing adapts to desktop and mobile screens.
+- **Reusable Track Logic:** JavaScript processes multiple tracks using `querySelectorAll()` and `forEach()`.
+- **Dynamic Distance Calculation:** Each track independently calculates its scrolling distance 
+and passes it to CSS using a custom property.
+
+## Component Structure
+
+- `bt-marquee` — Main component container.
+- `bt-marquee-title` — Component heading and description.
+- `bt-marquee__rows` — Vertical arrangement of the scrolling rows.
+- `bt-marquee__viewport` — Visible area, overflow control, and hover detection for each row.
+- `bt-marquee__track` — Horizontal item layout and scrolling animation.
+- `bt-marquee__track--reverse` — Reverse animation direction for the second row.
+- `bt-marquee__item` — Individual card container.
+- `bt-marquee__link` — Interactive card link and hover effect.
+- `bt-marquee__media` — Image or logo content.
+
+## Interaction Behavior
+
+1. JavaScript selects all marquee tracks within the component.
+2. Each track is processed independently using `forEach()`.
+3. Original items are identified and cloned twice for continuous scrolling.
+4. Duplicated content is marked with `aria-hidden`, and cloned links are excluded from sequential Tab navigation.
+5. JavaScript calculates the distance between the original and repeated item groups for each track.
+6. The calculated distance is assigned to the CSS custom property `--bt-marquee-distance`.
+7. CSS keyframes animate the tracks continuously.
+8. The second track uses `animation-direction: reverse` to move in the opposite direction.
+9. Hovering over a viewport pauses its corresponding track.
+10. Leaving the viewport resumes the animation.
+
+## Accessibility Notes
+
+Original card links remain available for keyboard navigation, while duplicated links are excluded from 
+the sequential Tab order.
+
+The component includes focus-visible styling and pauses the corresponding track when a link receives focus-visible.
+
+Version 1.0 does not include dedicated playback controls, reduced-motion handling, or off-screen focus management. 
+These features are reserved for a future extended version.
+
+## Recommended Use Cases
+
+- Brand and partner logo showcases
+- Corporate client collections
+- E-commerce brand displays
+- Portfolio and project showcases
+- Promotional content strips
+
+## Version
+
+v1.0 — Dual Row Reverse Marquee
+
+**Status:** Core interaction implemented and responsive behavior verified. Advanced accessibility 
+controls are planned for a future version.
