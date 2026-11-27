@@ -59,6 +59,7 @@ const codeTitles = {
     html: "MARKUP(HTML)",
     css: "STYLESHEET(CSS)",
     js: "JAVASCRIPT(JS)",
+    json: "JSON(JSON)",
     overview: "OVERVIEW"
 };
 
@@ -70,6 +71,7 @@ const sourceFiles = {
     html: sourceCode?.dataset.html,
     css: sourceCode?.dataset.css,
     js: sourceCode?.dataset.js,
+    json: sourceCode?.dataset.json,
     overview: sourceCode?.dataset.overview
 };
 
@@ -162,6 +164,7 @@ const codeLabels = {
     html: "HTML",
     css: "CSS",
     js: "JS",
+    json: "JSON",
     overview: "INFO"
 };
 

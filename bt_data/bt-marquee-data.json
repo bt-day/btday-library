@@ -14,7 +14,7 @@
         },
         {
             "image": "bt_assets/images/banner/qs-thumb.png",
-            "title": "Bubble Tok Peptide",
+            "title": "Bubble Peptide",
             "description": "펩타이드 화장품 상세페이지",
             "url": "pf-detail01.html"
         },
@@ -69,7 +69,7 @@
         {
             "image": "bt_assets/images/banner/pce-thumb.png",
             "title": "Technology Standard",
-            "description": "전기 연결 기술정보 안내 페이지",
+            "description": "전기 연결 기술정보 페이지",
             "url": "pf-detail05.html"
         }
     ]
