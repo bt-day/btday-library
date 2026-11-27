@@ -1,0 +1,76 @@
+{
+    "items": [
+        {
+            "image": "bt_assets/images/banner/co-04.png",
+            "title": "Cosmetic Campaign",
+            "description": "화장품 프로모션 배너 디자인",
+            "url": "pf-banner01.html"
+        },
+        {
+            "image": "bt_assets/images/banner/mjm-thumb.jpg",
+            "title": "MJM Electric",
+            "description": "산업용 쇼핑몰 디자인·퍼블리싱",
+            "url": "pf-website-06.html"
+        },
+        {
+            "image": "bt_assets/images/banner/qs-thumb.png",
+            "title": "Bubble Tok Peptide",
+            "description": "펩타이드 화장품 상세페이지",
+            "url": "pf-detail01.html"
+        },
+        {
+            "image": "bt_assets/images/banner/mo01.jpg",
+            "title": "Medical & Beauty",
+            "description": "뷰티클리닉 프로모션 디자인",
+            "url": "pf-banner02.html"
+        },
+        {
+            "image": "bt_assets/images/banner/diva-thumb.png",
+            "title": "Diva Brand Website",
+            "description": "프리미엄 오디오 반응형 웹",
+            "url": "pf-website-01.html"
+        },
+        {
+            "image": "bt_assets/images/banner/soap-thumb.png",
+            "title": "Bubble Gem Soap",
+            "description": "천연비누 제품 상세페이지",
+            "url": "pf-detail02.html"
+        },
+        {
+            "image": "bt_assets/images/banner/tr-01.png",
+            "title": "Travel Campaign",
+            "description": "여행 시즌 프로모션 디자인",
+            "url": "pf-banner03.html"
+        },
+        {
+            "image": "bt_assets/images/banner/wine-thumb.jpg",
+            "title": "Wine Audio",
+            "description": "하이파이 오디오 쇼핑몰 디자인",
+            "url": "pf-website-08.html"
+        },
+        {
+            "image": "bt_assets/images/banner/safety-thumb.png",
+            "title": "Safety Information",
+            "description": "산업용 전기 안전정보 페이지",
+            "url": "pf-detail04.html"
+        },
+        {
+            "image": "bt_assets/images/banner/focal_btn02.png",
+            "title": "Premium Audio",
+            "description": "하이엔드 오디오 브랜드 배너",
+            "url": "pf-banner04.html"
+        },
+        {
+            "image": "bt_assets/images/banner/qs-thumb02.png",
+            "title": "Queen's Collagen",
+            "description": "뷰티 브랜드 웹사이트 디자인",
+            "url": "pf-website-03.html"
+        },
+        {
+            "image": "bt_assets/images/banner/pce-thumb.png",
+            "title": "Technology Standard",
+            "description": "전기 연결 기술정보 안내 페이지",
+            "url": "pf-detail05.html"
+        }
+    ]
+}
