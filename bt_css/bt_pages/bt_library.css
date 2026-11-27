@@ -245,6 +245,7 @@ form {
 
 
 
+
 /*   하단 bt-marquee 슬라이더   */
 .bt-marquee {
     width: min(calc(100% - 40px), 1440px);
@@ -293,6 +294,8 @@ form {
     width: 100%;
     overflow: hidden;
     padding-block: 8px;
+
+    clip-path: inset(0 16px);
 }
 
 
@@ -326,9 +329,6 @@ form {
 .bt-marquee:has(.bt-marquee__link:focus-visible) .bt-marquee__track {
     animation-play-state: paused;
 }
-
-
-
 
 .bt-marquee__item {
     flex: 0 0 200px;
