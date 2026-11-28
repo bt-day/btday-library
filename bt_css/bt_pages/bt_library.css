@@ -87,8 +87,9 @@ main {
     gap: var(--bt-space-48);
 }
 
+
 .gallery-hero {
-    width: min(82%, 1136px);
+    width: min(calc(100% - clamp(32px, 5vw, 80px)), 1200px);
     margin-inline: auto;
 
     display: flex;
@@ -99,7 +100,7 @@ main {
 }
 
 .main-search {
-    flex: 1 1 55%;
+    flex: 1 1 30%;
 }
 
 form {
@@ -117,7 +118,6 @@ form {
         inset 0 1px 0 rgba(255, 255, 255, 0.8),
         0 3px 12px rgba(70, 110, 180, 0.05);
 
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -129,7 +129,7 @@ form {
 }
 
 .main-search input {
-    flex: 1 1 50%;
+    flex: 1 1 40%;
     /* 백그라운드 지정 */
     border: 0;
     outline: 0;
@@ -145,7 +145,6 @@ form {
     background-clip: text;
     -webkit-text-fill-color: currentColor;
 }
-
 
 /* 브라우저 기본 X 버튼 숨김 */
 .main-search input::-webkit-search-cancel-button {
@@ -169,12 +168,12 @@ form {
     display: none;
 }
 
-
-
 .main-search button {
     width: 25px;
+    min-width: 25px;
     height: 25px;
 }
+
 
 .bt-hero {
     flex: 1 1 40%;
@@ -184,6 +183,7 @@ form {
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: var(--bt-font-size-20);
 }
 
@@ -293,17 +293,18 @@ form {
 
 
 .bt-marquee__viewport {
-    width: 100%;
+    width: calc(100% - 30px);
+    max-width: 1200px;
+    margin-inline: auto;
     overflow: hidden;
-    padding-block: 8px;
+    padding-block: 14px;
 
-    clip-path: inset(0 16px);
+    /*  clip-path: inset(0 26px); */
 }
 
 
 .bt-marquee__track {
     width: max-content;
-
     display: flex;
     gap: var(--bt-space-16);
 }
@@ -393,6 +394,38 @@ form {
 
 
 
+.bt-marquee__viewport {
+    position: relative;
+
+}
+
+
+.bt-marquee__viewport::before,
+.bt-marquee__viewport::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.bt-marquee__viewport::before {
+    left: 0;
+}
+
+.bt-marquee__viewport::after {
+    right: 0;
+}
+
+
+
+
+
+
+
 
 
 
@@ -436,6 +469,11 @@ form {
 @media (max-width:768px) {
     .bt-marquee__item {
         flex: 0 0 200px;
+    }
+
+    .bt-hero {
+        flex: none;
+        width: calc(100% - 30px);
     }
 }
 

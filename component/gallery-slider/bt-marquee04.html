@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="뷰티데이 컴포넌트 라이브러리 개발소스 저장 사이트 입니다">
+
+        <title>BTDAY marquee04 숏츠영상 롤링</title>
+        <meta name="description" content="실무에 활용하는 반응형 UI 컴포넌트, JavaScript 인터랙션 및 AJAX 소스 라이브러리.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="BTDAY Component Library">
+        <meta property="og:description" content="Responsive UI · Interaction · AJAX">
+        <meta property="og:image"
+            content="https://bt-day.github.io/btday-library/bt_assets/images/og-favicon/btday-og.png">
+        <meta property="og:url" content="https://bt-day.github.io/btday-library/">
+        <link rel="icon" type="image/png" href="bt_assets/images/og-favicon/btday-p.svg">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <link rel="stylesheet" as="style" crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <!-- Foundation :: CSS -->
+        <link href="css/bt_reset.css" rel="stylesheet">
+        <link href="css/bt_common.css" rel="stylesheet">
+        <link href="css/bt_foundation_token.css" rel="stylesheet">
+
+        <!-- 페이지 전용 CSS : 인덱스 -->
+        <link rel="stylesheet" href="css/bt_marquee04.css">
+
+    </head>
+
+    <body>
+
+        <section class="bt-short-ms">
+            <div class="bt-short-header">
+                <div class="bt-short-title">
+                    <h3>유튜브 숏츠 롤링</h3>
+                    <p>가상영역 지정 쇼츠 본문 설명 입니다.</p>
+                </div>
+                <ul class="bt-short-player">
+                    <li><img src="img/circle-arrow-left.svg" alt="" /></li>
+                    <li><img src="img/player-pause.svg" alt="" /></li>
+                    <li><img src="img/circle-arrow-right.svg" alt="" /></li>
+                </ul>
+            </div>
+            <div class="bt-short-viewport">
+                <ul class="bt-short-track">
+                    <li>
+                        <div class="bt-short-visual">
+                            <video class="bt-short-video" playsinline autoplay muted loop preload="metadata"
+                                poster="images/video-poster01.jpg">
+                                <source src="video/bt-sh01.mp4" type="video/mp4">
+                                브라우저가 동영상 재생을 지원하지 않습니다.
+                            </video>
+                        </div>
+                        <div class="bt-short-conts">
+                            <h3>BTDAY UI Showcase</h3>
+                            <p>Responsive UI & Interaction</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bt-short-visual">
+                            <iframe class="bt-short-video"
+                                src="https://www.youtube.com/embed/d3Bnfcz1xxk?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=d3Bnfcz1xxk"
+                                title="BTDAY Shorts" allow="autoplay; encrypted-media; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="bt-short-conts">
+                            <h3>BTDAY UI Showcase</h3>
+                            <p>Responsive UI & Interaction</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bt-short-visual">
+                            <iframe class="bt-short-video"
+                                src="https://www.youtube.com/embed/UtepPvmvoRU?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=UtepPvmvoRU"
+                                title="BTDAY Shorts" allow="autoplay; encrypted-media; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="bt-short-conts">
+                            <h3>BTDAY UI Showcase</h3>
+                            <p>Responsive UI & Interaction</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bt-short-visual">
+                            <iframe class="bt-short-video"
+                                src="https://www.youtube.com/embed/y4DnsCzJTRQ?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=y4DnsCzJTRQ"
+                                title="BTDAY Shorts" allow="autoplay; encrypted-media; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="bt-short-conts">
+                            <h3>BTDAY UI Showcase</h3>
+                            <p>Responsive UI & Interaction</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bt-short-visual">
+                            <iframe class="bt-short-video"
+                                src="https://www.youtube.com/embed/y4DnsCzJTRQ?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=y4DnsCzJTRQ"
+                                title="BTDAY Shorts" allow="autoplay; encrypted-media; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="bt-short-conts">
+                            <h3>BTDAY UI Showcase</h3>
+                            <p>Responsive UI & Interaction</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Rolling Marquee -->
+        <script src="js/bt-marquee04.js"></script>
+
+    </body>
+
+</html>
